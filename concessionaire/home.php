@@ -243,14 +243,7 @@
                   </div>
                   <div class="modal-body">
                     <div class="theme-card">
-                        <form class="theme-form">
-                          <div class="form-group">
-                              <label for="refnumlabel" id="refnum">Enter Reference #:</label>
-                              <input type="text" class="form-control" id="input-ref" required="">
-                          </div>
-                            <button type="button" class="btn-modal" id="confirm-btn" data-toggle="modal" data-target="#verified-modal" data-dismiss="modal">Confirm</button>
-                            <button type="button" class="btn-modal" id="cncel-btn" data-dismiss="modal">Cancel</button>
-                        </form>
+                        
                     </div>
                   </div>
               </div>
