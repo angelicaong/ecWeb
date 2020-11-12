@@ -1,0 +1,36 @@
+Basic login info:
+student:
+    username: your student id
+    pass: 12345
+admin: 
+    username: 18191002
+    pass: 12345
+cashier:
+    username: 16172000
+    pass: 12345
+concessionaire-admin: 
+    Greens (inactive)
+        username: 20191
+        pass: 12345
+    3rd Floor (inactive)
+        username: 20192
+        pass: 12345
+    Cafe Archive
+        username: 20194
+        pass: 12345
+    1218 Diner
+        username: 20193
+        pass: 12345
+concessionaire-casher:
+    1218 Diner
+        username: 20234
+        pass: 12345
+    Cafe Archive
+        username: 20241
+        pass: 12345
+    Greens (inactive)
+        username: 20254
+        pass: 12345
+    3rd Floor (inactive)
+        username: 20257
+        pass: 12345
