@@ -106,7 +106,7 @@
             <tbody>
                     <tr>
                         <td> 12345696 </td>                    
-                        <td> 14:10:32 </td>
+                        <td> 14:10 </td>
                         <td> 2/27/2020 </td>
                         <td> Honey Glazed Pork</td>
                         <td> 50.00</td>
@@ -115,7 +115,7 @@
                     </tr>
                     <tr>
                         <td> 12345699 </td>                    
-                        <td> 13:11:05 </td>
+                        <td> 13:11 </td>
                         <td> 2/27/2020 </td>
                         <td> Pork Tonkatsu</td>
                         <td> 50.00</td>
@@ -124,7 +124,7 @@
                     </tr>
                     <tr>
                         <td> 12345700 </td>                    
-                        <td> 13:00:00 </td>
+                        <td> 13:00 </td>
                         <td> 2/27/2020 </td>
                         <td> Brownies </td>
                         <td> 25.00</td>
@@ -135,7 +135,7 @@
                      </tr>
                     <tr>
                         <td> 12345701 </td>                    
-                        <td> 12:05:00 </td>
+                        <td> 12:05 </td>
                         <td> 2/27/2020 </td>
                         <td> Withdrawal </td>
                         <td> 0.00</td>
@@ -146,7 +146,7 @@
                     <tr>
                         <br>
                         <td> 12345702 </td>                    
-                        <td> 11:10:05 </td>
+                        <td> 11:10 </td>
                         <td> 2/27/2020 </td>
                         <td> Honey Glazed Pork</td>
                         <td> 100.00</td>
