@@ -51,7 +51,14 @@
                 <td class="pt-3-half" contenteditable="true">Hazel Cruz</td>
                 <td class="pt-3-half" >20193</td>
                 <td class="pt-3-half" contenteditable="true">1213diner@gmail.com</td>
-                <td class="pt-3-half" contenteditable="true" id="admin-active-status">Active</td>
+                
+                <!-- <td class="pt-3-half" contenteditable="true" id="admin-active-status">Active</td> -->
+                <td>
+                    <select class="form-control" id="admin-active-status">
+                        <option>Active</option>
+                        <option>Inactive</option>
+                    </select>
+                </td>
             </tr>
         </tbody>
         </table>
