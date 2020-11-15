@@ -480,6 +480,14 @@ header {
     pointer-events: none;
 }
 
+#cashconfirm-btn:hover, #cashcancel-btn:hover, #cashsubmit-btn:hover, #idconfirm-btn:hover, #idcncel-btn:hover,
+#qrconfirm-btn:hover, #qrcncel-btn:hover{
+    background-color: #00364d; 
+    border-color: #00364d;
+}
+
+
+
 
 
 
