@@ -20,6 +20,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Tailwind CSS -->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <!-- additional chuchu -->
     <link rel="shortcut icon" type="image" href="../resources/images/ec-logo-only.png" />
     <link rel="stylesheet" href="../resources/css/main.css">
@@ -32,13 +34,15 @@
         <a href="home.php">
             <img class = "new-navbar-logo" src= "../resources/images/ec-logo-white.png" alt="" height="60px" width="140px" >
         </a>
-        <a class ="new-navbar-btn-area" href="../resources/php/logout.php"><img src="../resources/images/logout.png" height="20px" width="20px" id="logout-icon">Log Out</a>
+        <a class ="new-navbar-btn-area" href="../resources/php/logout.php">
+            <img src="../resources/images/logout.png" class ="w-5 h-5 my-auto float-left" id="logout-icon">Log Out
+        </a> 
     </header>
 
 
     <div class ="container" id="cc-main">
        <div class ="cc-menu">
-           <h2>Menu</h2>
+           <h2 class = "text-4xl mb-2">Menu</h2>
             <button type ="submit" class="btn btn-dark" id="cc-menu-items" onclick="window.location.href='rice-bowls.php'">Rice Bowls</button>
             <button type ="submit" class="btn btn-dark" id="cc-menu-items"onclick="window.location.href='sandwiches.php'">Sandwiches</button>
             <button type ="submit" class="btn btn-dark" id="cc-menu-items"onclick="window.location.href='pasta.php'">Pasta</button>
@@ -49,7 +53,7 @@
        </div>
        
        <div class ="cc-cart">
-         <h3>Cart</h3>
+         <h3 class = "text-4xl mb-2">Cart</h3>
           <table class="table" id="table-cart">
             <thead>
             <tr>
@@ -99,7 +103,7 @@
             </tbody>
           </table>
           
-          <button type="button" data-toggle="modal" data-target="#checkout-modal" class="btn btn-success" id="checkout-btn"><img src="../resources/images/checkout.png" height="25px" width="25px" id="checkout-icon">Check Out</button> 
+          <button type="button" data-toggle="modal" data-target="#checkout-modal" class="btn btn-success" id="checkout-btn"><img src="../resources/images/checkout.png" class ="w-6 h-6 my-auto float-left" id="checkout-icon">Check Out</button> 
             
                <div class="modal fade" id="checkout-modal" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
