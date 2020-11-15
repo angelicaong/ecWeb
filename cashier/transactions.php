@@ -12,6 +12,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Tailwind CSS -->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <!-- additional chuchu -->
     <link rel="shortcut icon" type="image" href="../resources/images/ec-logo-only.png" />
     <link rel="stylesheet" href="../resources/css/main.css">
@@ -31,9 +33,9 @@
                 <li><a class="new-navbar-apage" href="transaction.php">Transactions</a></li>
             </ul>
         </nav>
-        <div class = "nav-logout-btn">
-            <a class ="new-navbar-btn-area" href="../resources/php/logout.php"><img src="../resources/images/logout.png" height="20px" width="20px" id="logout-icon">Log Out</a>
-        </div>
+        <a class ="new-navbar-btn-area" href="../resources/php/logout.php">
+            <img src="../resources/images/logout.png" class ="w-5 h-5 my-auto float-left" id="logout-icon">Log Out
+        </a>   
         <div class = "burger">
             <div class = "line1"></div>
             <div class = "line2"></div>
@@ -41,8 +43,8 @@
         </div>
     </header>
     
-    <div class ="container">
-    <h3 style="text-align: center; margin-bottom: 20px;">Transaction History</h3>
+    <div class ="container mt-2">
+    <h3 class = "text-4xl text-center">Transaction History</h3>
 
     <!--Table-->
      <table class="table table-hover table-fixed" id="ca-trans-history-table">
