@@ -62,7 +62,7 @@
          <!--Table body-->
              <tr>
                 <td> 12345696 </td>                    
-                <td> 14:10:32 </td>
+                <td> 14:10 </td>
                 <td> 2/27/2020 </td>
                 <td> Alignay, Rissha Jhie-Ann</td>
                 <td> 1000.00</td>
@@ -71,7 +71,7 @@
             </tr>
             <tr>
                 <td> 12345699 </td>                    
-                <td> 13:11:05 </td>
+                <td> 13:11 </td>
                 <td> 2/27/2020 </td>
                 <td> Paez, Christine Anne</td>
                 <td> 1000.00</td>
@@ -80,7 +80,7 @@
             </tr>
             <tr>
                 <td> 12345700 </td>                    
-                <td> 13:00:00 </td>
+                <td> 13:00 </td>
                 <td> 2/27/2020 </td>
                 <td> Ong, Angelica Farrah Mae </td>
                 <td> 1000.00</td>
@@ -91,7 +91,7 @@
              </tr>
             <tr>
                 <td> 12345701 </td>                    
-                <td> 12:05:00 </td>
+                <td> 12:05 </td>
                 <td> 2/27/2020 </td>
                 <td> Cruz, Jefferson </td>
                 <td> 1000.00</td>
@@ -102,7 +102,7 @@
             <tr>
                 <br>
                 <td> 12345702 </td>                    
-                <td> 11:10:05 </td>
+                <td> 11:10 </td>
                 <td> 2/27/2020 </td>
                 <td> Castillo, Kit Alejandro</td>
                 <td> 1000.00</td>
@@ -113,7 +113,7 @@
 
             <tr>
                 <td> 12345900 </td>                    
-                <td> 18:30:00</td>
+                <td> 18:30</td>
                 <td> 2/25/2020 </td>
                 <td> Alignay, Rissha Jhie-Ann</td>
                 <td> 1000.00</td>
@@ -123,7 +123,7 @@
 
             <tr>
                 <td> 12345901 </td>                    
-                <td> 16:50:00 </td>
+                <td> 16:50 </td>
                 <td> 2/25/2020 </td>
                 <td> Paez, Christine Anne</td>
                 <td> 1000.00</td>
@@ -133,7 +133,7 @@
 
             <tr>
                 <td> 12345902 </td>                    
-                <td> 15:30:00 </td>
+                <td> 15:30 </td>
                 <td> 2/25/2020 </td>
                 <td> Ong, Angelica Farrah Mae </td>
                 <td> 1000.00</td>
@@ -143,7 +143,7 @@
 
             <tr>
                 <td> 12345701 </td>                    
-                <td> 14:10:00 </td>
+                <td> 14:10 </td>
                 <td> 2/25/2020 </td>
                 <td> Mirana, Joeben </td>
                 <td> 1000.00</td>
@@ -153,7 +153,7 @@
 
             <tr>
                 <td> 12345702 </td>                    
-                <td> 13:10:50 </td>
+                <td> 13:10 </td>
                 <td> 2/25/2020 </td>
                 <td> Castillo, Kit Alejandro</td>
                 <td> 1000.00</td>
@@ -162,7 +162,7 @@
             </tr>
             <tr>
                 <td> 12345703 </td>                    
-                <td> 12:20:50 </td>
+                <td> 12:20 </td>
                 <td> 2/25/2020 </td>
                 <td> Mirana, Joeben</td>
                 <td> 1000.00</td>
@@ -172,7 +172,7 @@
 
             <tr>
                 <td> 12345704 </td>                    
-                <td> 10:25:00 </td>
+                <td> 10:25 </td>
                 <td> 2/25/2020 </td>
                 <td> Santiago, Lyra</td>
                 <td> 1000.00</td>
@@ -182,7 +182,7 @@
 
             <tr>
                 <td> 12345704 </td>                    
-                <td> 9:00:20 </td>
+                <td> 09:00 </td>
                 <td> 2/25/2020 </td>
                 <td> Cruz, Jeff</td>
                 <td> 1000.00</td>

@@ -66,7 +66,12 @@
                 <td class="pt-3-half" contenteditable="true">Amaya Skye</td>
                 <td class="pt-3-half">20324</td>
                 <td class="hidetext" contenteditable="true"></td>
-                <td class="pt-3-half" contenteditable="true" id="admin-active-status">Active</td>
+                <td>
+                    <select class="form-control" id="admin-active-status">
+                        <option>Active</option>
+                        <option>Inactive</option>
+                    </select>
+                </td>
             </tr>
         </tbody>
         </table>

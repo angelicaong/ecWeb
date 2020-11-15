@@ -340,6 +340,7 @@ header {
 }
 #admin-active-status {
     color: limegreen;
+    border-color:none;
 }
 #admin-profile-div {
     display: block;
