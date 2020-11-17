@@ -145,8 +145,8 @@
                                         <input type="text" class="form-control" id="inputchange" required="" readonly>
                                     </div>
                                                     
-                                        <input type="button" class="btn-modal btn btn-outline-primary" id="cashsubmit-btn" value="Confirm"/>
-                                        <button type="button" class="btn-modal btn btn-outline-primary" id="cashcancel-btn" data-dismiss="modal">Cancel</button>
+                                        <input type="button" class="btn-modal btn btn-success" id="cashsubmit-btn" value="Confirm"/>
+                                        <button type="button" class="btn-modal btn btn-success" id="cashcancel-btn" data-dismiss="modal">Cancel</button>
                                 </form>
                             </div>
                         </div>
@@ -160,6 +160,7 @@
                         <div class="modal-header">
                             <h5 class="modal-title" id="amount-style">Cash Payment</h5>
                         </div>
+
                         <div class="modal-body">
                             <div class="theme-card">
                                 <form class="theme-form">
@@ -168,8 +169,8 @@
                                         <input type="number" class="form-control" id="input-amt" min=0 value="000.00" required="">
                                     </div>
                                     
-                                    <button type="button" class="btn-modal btn btn-outline-primary" id="cashconfirm-btn" data-toggle="modal" data-target="#changemodal" data-dismiss="modal">Next</button>
-                                    <button type="button" class="btn-modal btn btn-outline-primary" id="cashcancel-btn" data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn-modal btn btn-success" id="cashconfirm-btn" data-toggle="modal" data-target="#changemodal" data-dismiss="modal">Next</button>
+                                    <button type="button" class="btn-modal btn btn-success" id="cashcancel-btn" data-dismiss="modal">Cancel</button>
                                     
                                 </form>
                             </div>
@@ -188,8 +189,8 @@
                           <div class="form-group">
                               <label for="" id="idlabel">Transaction Completed!</label> 
                           </div>
-                            <button type="button" class="btn-modal btn btn-outline-primary" id="idconfirm-btn" data-toggle="modal" data-target="#" data-dismiss="modal">Ok</button>
-                            <button type="button" class="btn-modal btn btn-outline-primary" id="idcncel-btn" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn-modal btn btn-success" id="idconfirm-btn" data-toggle="modal" data-target="#" data-dismiss="modal">Ok</button>
+                            <button type="button" class="btn-modal btn btn-success" id="idcncel-btn" data-dismiss="modal">Cancel</button>
                         </form>
                     </div>
                   </div>
