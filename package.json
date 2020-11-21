@@ -1,0 +1,29 @@
+{
+  "name": "ecWeb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss build resources/css/src/styles.css -o resources/css/public/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angelicaong/ecWeb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angelicaong/ecWeb/issues"
+  },
+  "homepage": "https://github.com/angelicaong/ecWeb#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "tailwindcss": "^2.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.2",
+    "postcss": "^8.1.7",
+    "xxxxx": "^1.0.3"
+  }
+}

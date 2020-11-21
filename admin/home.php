@@ -18,8 +18,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Tailwind CSS -->
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-
+    <link href="../resources/css/public/styles.css" rel="stylesheet">
+    <!-- Fontawesome -->
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">     
     <!-- additional chuchu -->
     <link rel="shortcut icon" type="image" href="../resources/images/ec-logo-only.png" />
     <link rel="stylesheet" href="../resources/css/main.css">
@@ -28,70 +31,210 @@
     </head>
     
    <body>
-   <header class="new-navbar">
-        <a href="home.php">
-            <img class = "new-navbar-logo" src= "../resources/images/ec-logo-white.png" alt="" height="60px" width="140px" >
-        </a>
-        <a class ="new-navbar-btn-area" href="../resources/php/logout.php">
-            <img src="../resources/images/logout.png" class ="w-5 h-5 my-auto float-left" id="logout-icon">Log Out
-        </a>
-    </header>
-    <div class="container">
-        <div class = "manage-div">
-            <span id="span-accounts">Concessionaire Accounts</span> 
-            <button type="submit" onclick="window.location.href='add-account.php'"class="btn btn-success" id="add-new-acc"><img src="../resources/images/add.png" height="20px" width="20px" id="add-icon"></button>
-        </div>
+    <nav class="bg-ecdarkblue mb-2"> 
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                <div class="flex-1 flex sm:items-stretch sm:justify-start">
+                    <a class="flex items-center" href="home.php" >
+                        <img class="block h-10 w-auto pl-4" src= "../resources/images/ec-logo-white-new.png" alt="EC Card logo">
+                    </a>
+                </div>  
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:pr-0">
+                    <div class="relative px-3 py-2 font-medium rounded-md text-sm" >
+                        <a class = "text-white tracking-wide " href="../resources/php/logout.php">Log out</a>
+                    </div>
+                    
                 
-        <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Accounts</th>
-                <th>Manager</th>
-                <th>Username</th>
-                <th>Email Address</th>
-                <th>Status</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
-            <tbody>
-            <tr>
-                <td>1218 Diner</td>
-                <td>Hazel Cruz</td>
-                <td>20193</td>
-                <td>1213diner@gmail.com</td>
-                <td id="admin-active-status">Active</td>
-                <td><a href="edit-account.php"><img src ="../resources/images/edit.png" height="20px" width="20px" id="edit-icon"></a></td>
-                <td><img src ="../resources/images/delete.png" height="20px" width="20px" id="delete-icon"></td>
-            </tr>
-            <tr>
-                <td>Cafe Archive</td>
-                <td>Analiza Mendez</td>
-                <td>20194</td>
-                <td>cafearchive@gmail.com</td>
-                <td id="admin-active-status">Active</td>
-                <td><a href="edit-account.php"><img src ="../resources/images/edit.png" height="20px" width="20px" id="edit-icon"></a></td>
-                <td><img src ="../resources/images/delete.png" height="20px" width="20px" id="delete-icon"></td>
-            </tr>
-                <tr>
-                    <td>3rd Floor</td>
-                    <td>Cara Hokkaido</td>
-                    <td>20192</td>
-                    <td>3rdfloor@gmail.com</td>
-                    <td id="admin-inactive-status">Inactive</td>
-                    <td><a href="edit-account.php"><img src ="../resources/images/edit.png" height="20px" width="20px" id="edit-icon"></a></td>
-                    <td><img src ="../resources/images/delete.png" height="20px" width="20px" id="delete-icon"></td>
-                </tr>
-                <tr>
-                    <td>Greens</td>
-                    <td>Gerry Okinawa</td>
-                    <td>20191</td>
-                    <td>greens@gmail.com</td>
-                    <td id="admin-inactive-status">Inactive</td>
-                    <td><a href="edit-account.php"><img src ="../resources/images/edit.png" height="20px" width="20px" id="edit-icon"></a></td>
-                    <td><img src ="../resources/images/delete.png" height="20px" width="20px" id="delete-icon"></td>
-                  </tr>
-            </tbody>
-        </table>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class = "container mx-auto py-4">
+        <div class = "flex">
+            <h2 class = "flex-1 tem-left text-2xl mt-3 mb-3 font-medium tracking-wide">Concessionare Accounts </h2>
+            <button type="button" class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-sm border border-gray-400 text-sm text-gray-300 uppercase tracking-wider hover:bg-gray-300">Add account</button>
+        </div>
+        <div class="flex flex-col">
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                    <div class="shadow-md overflow-hidden border-b border-t border-gray-200 sm:rounded-lg">
+                        <table class="min-w-full divide-y divide-gray-300 bg-ecdarkblue">
+                            <thead>
+                                <tr>
+                                <th class="px-10 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                    Name
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                    Concessionaire
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                    Username
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                    Status
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                    Role
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50 bg-ecdarkblue"></th>
+                                </tr>
+                            </thead>
+
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <!-- 1st row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap">
+                                        <div class="flex items-center">
+                                            <div class="ml-4">
+                                                <div class="text-sm leading-5 font-medium text-gray-900">
+                                                Hazel Cruz
+                                                </div>
+                                                <div class="text-sm leading-5 text-gray-500">
+                                                1213diner@gmail.com
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap">
+                                        <div class="text-sm leading-5 text-gray-900">1218 Diner</div> 
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        20193
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                        Active
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Admin
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:text-gray-300 uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Edit</button>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:text-gray-300 uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Delete</button>
+                                    </td>
+                                </tr>
+
+                                <!-- 2nd row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap">
+                                        <div class="flex items-center">
+                                            <div class="ml-4">
+                                                <div class="text-sm leading-5 font-medium text-gray-900">
+                                                Analiza Mendez
+                                                </div>
+                                                <div class="text-sm leading-5 text-gray-500">
+                                                cafearchive@gmail.com
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Cafe Archive
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        20194
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                        Active
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Admin
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:text-gray-300 uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Edit</button>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:text-gray-300 uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Delete</button>
+                                    </td>
+                                </tr>
+
+                                <!-- 3rd row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap">
+                                        <div class="flex items-center">
+                                            <div class="ml-4">
+                                                <div class="text-sm leading-5 font-medium text-gray-900">
+                                                Cara Hokkaido
+                                                </div>
+                                                <div class="text-sm leading-5 text-gray-500">
+                                                3rdfloor@gmail.com
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        3rd Floor
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        20192
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-gray-100 text-gray-500">
+                                        Inactive
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Admin
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:text-gray-300 uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Edit</button>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:text-gray-300 uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Delete</button>
+                                    </td>
+                                </tr>
+
+                                <!-- 4throw -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap">
+                                        <div class="flex items-center">
+                                            <div class="ml-4">
+                                                <div class="text-sm leading-5 font-medium text-gray-900">
+                                                Jerry Okinawa
+                                                </div>
+                                                <div class="text-sm leading-5 text-gray-500">
+                                                greens@gmail.com
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Greens
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        20191
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-gray-100 text-gray-500">
+                                        Inactive
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Admin
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:text-gray-300 uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Edit</button>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:text-gray-300 uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Delete</button>
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+    <script src="../resources/js/ecWeb.js"></script>
    </body>
