@@ -480,12 +480,35 @@ header {
     pointer-events: none;
 }
 
-#cashconfirm-btn:hover, #cashcancel-btn:hover, #cashsubmit-btn:hover, #idconfirm-btn:hover, #idcncel-btn:hover,
-#qrconfirm-btn:hover, #qrcncel-btn:hover{
-    background-color: #00364d; 
+#cashconfirm-btn, #cashsubmit-btn, #idconfirm-btn,
+#qrconfirm-btn{
+background-color: #00a4d3;
+text-decoration: none;
+border-color: #00a4d3;
+color: #fff;
+}
+
+
+#cashconfirm-btn:hover, #cashsubmit-btn:hover, #idconfirm-btn:hover,
+#qrconfirm-btn:hover{
+    background-color: #017596;
     border-color: #00364d;
 }
 
+#cashcancel-btn:hover,#idcncel-btn:hover,#qrcncel-btn:hover{
+    background-color: #fff;
+    border-color: #6B6967;
+    transition: 0.5s;
+    color: #6B6967;
+}
+
+#cashcancel-btn,#idcncel-btn,#qrcncel-btn{
+    background-color: #6B6967;
+    text-decoration: none;
+    border-color: #6B6967;
+    color: white;
+
+}
 
 
 

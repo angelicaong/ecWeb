@@ -124,9 +124,9 @@
                                   
                     </div>
                  </div>
-          
+            </div>
 
-          <!-- Cash Modal -->
+           <!-- Cash Modal -->
 
           <div class="modal fade" id="changemodal" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -142,8 +142,8 @@
                                         <input type="text" class="form-control" id="inputchange" required="" readonly>
                                     </div>
                                                     
-                                        <input type="button" class="btn-modal" id="submit-btn" value="Confirm"/>
-                                        <button type="button" class="btn-modal" id="cncel-btn" data-dismiss="modal">Cancel</button>
+                                        <input type="button" class="btn-modal btn btn-success" id="cashsubmit-btn" value="Confirm"/>
+                                        <button type="button" class="btn-modal btn btn-success" id="cashcancel-btn" data-dismiss="modal">Cancel</button>
                                 </form>
                             </div>
                         </div>
@@ -165,8 +165,8 @@
                                         <input type="number" class="form-control" id="input-amt" min=0 value="000.00" required="">
                                     </div>
                                     
-                                    <button type="button" class="btn-modal" id="confirm-btn" data-toggle="modal" data-target="#changemodal" data-dismiss="modal">Next</button>
-                                    <button type="button" class="btn-modal" id="cncel-btn" data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn-modal btn btn-success" id="cashconfirm-btn" data-toggle="modal" data-target="#changemodal" data-dismiss="modal">Next</button>
+                                    <button type="button" class="btn-modal btn btn-success" id="cashcancel-btn" data-dismiss="modal">Cancel</button>
                                     
                                 </form>
                             </div>
@@ -185,7 +185,7 @@
                           <div class="form-group">
                               <label for="" id="idlabel">Transaction Completed!</label> 
                           </div>
-                            <button type="button" class="btn-modal" id="confirm-btn" data-toggle="modal" data-target="#" data-dismiss="modal">Ok</button>
+                            <button type="button" class="btn-modal btn btn-success" id="idconfirm-btn" data-toggle="modal" data-target="#" data-dismiss="modal">Ok</button>
                             
                         </form>
                     </div>
@@ -207,8 +207,8 @@
                               <label for="idnumlabel" id="idlabel">ID Number</label>
                               <input type="number" class="form-control" id="input-id" value="00-00-0000" required="" readonly>
                           </div>
-                            <button type="button" class="btn-modal" id="confirm-btn" data-toggle="modal" data-target="#transact-modal" data-dismiss="modal">Next</button>
-                            <button type="button" class="btn-modal" id="cncel-btn" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn-modal btn btn-success" id="idconfirm-btn" data-toggle="modal" data-target="#transact-modal" data-dismiss="modal">Next</button>
+                            <button type="button" class="btn-modal btn btn-success" id="idcncel-btn" data-dismiss="modal">Cancel</button>
                         </form>
                     </div>
                   </div>
@@ -227,7 +227,7 @@
                           <div class="form-group">
                               <label for="" id="idlabel">Transaction Verified</label> 
                           </div>
-                            <button type="button" class="btn-modal" id="confirm-btn" data-toggle="modal" data-target="#" data-dismiss="modal">Ok</button>
+                            <button type="button" class="btn-modal btn btn-success" id="qrconfirm-btn" data-toggle="modal" data-target="#" data-dismiss="modal">Ok</button>
                         </form>
                     </div>
                   </div>
@@ -248,8 +248,8 @@
                               <label for="refnumlabel" id="refnum">Enter Reference #:</label>
                               <input type="text" class="form-control" id="input-ref" required="">
                           </div>
-                            <button type="button" class="btn-modal" id="confirm-btn" data-toggle="modal" data-target="#verified-modal" data-dismiss="modal">Confirm</button>
-                            <button type="button" class="btn-modal" id="cncel-btn" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn-modal btn btn-success" id="qrconfirm-btn" data-toggle="modal" data-target="#verified-modal" data-dismiss="modal">Confirm</button>
+                            <button type="button" class="btn-modal btn btn-success" id="qrcncel-btn" data-dismiss="modal">Cancel</button>
                         </form>
                     </div>
                   </div>
@@ -263,13 +263,9 @@
            
        
        </div>
-          
 
-
-      
-          
-        <!-- Quanitity Modal -->
-          <div class="modal" id="qty-modal">
+         <!-- Quanitity Modal -->
+         <div class="modal" id="qty-modal">
             <div class="modal-dialog">
               <div class="modal-content">
                 <!-- Modal Header -->
