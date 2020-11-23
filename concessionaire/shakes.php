@@ -124,13 +124,11 @@
                                   
                     </div>
                  </div>
-          
-
-          <!-- Cash Modal -->
+            </div>
 
            <!-- Cash Modal -->
 
-           <div class="modal fade" id="changemodal" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
+          <div class="modal fade" id="changemodal" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content" id="change-content">
                         <div class="modal-header">
@@ -258,31 +256,13 @@
               </div>
             </div>
             </div>
-          
 
 
-      
-          
-        <!-- Quanitity Modal -->
-          <div class="modal" id="qty-modal">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <!-- Modal Header -->
-                <div class="modal-header">
-                  <h4 class="modal-title">Quantity</h4>
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <!-- Modal body -->
-                <div class="modal-body" id="id-modal-menu-items">
-                  <span class="input-group-btn">
-                    <button id="minus"type="button"  onclick="quantity('-')">-</button>
-				    <input type="text" name="Quantity" placeholder="1" value="1" class="quantityTxtField" id="qtyTField" readonly>
-					<button id="plus"type="button"  onclick="quantity('+')">+</button>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
+            
+
+           
+       
+       </div>
 
 		
 
