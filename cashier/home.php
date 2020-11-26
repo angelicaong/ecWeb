@@ -32,16 +32,18 @@
                     <a class="flex items-center" href="home.php" >
                         <img class="block h-10 w-auto pl-4" src= "../resources/images/ec-logo-white-new.png" alt="EC Card logo">
                     </a>
-                </div>  
-            <ul class="new-nav-area">
-                <li><a class="new-navbar-apage" href="home.php">Home</a></li>
-                <li><a href="transactions.php">Transactions</a></li>
-            </ul>
-        </nav>
-        
-        <a class ="new-navbar-btn-area" href="../resources/php/logout.php">
-            <img src="../resources/images/logout.png" class ="w-5 h-5 my-auto float-left" id="logout-icon">Log Out
-        </a>    
+                </div> 
+
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:pr-0">
+                    <div class="relative px-3 py-2 font-medium rounded-md text-sm" >
+                    <a class = "text-white tracking-wide " href="home.php">Home</a>
+                    <a class = "text-white tracking-wide "href="transactions.php">Transaction</a>
+                    <a class = "text-white tracking-wide " href="../resources/php/logout.php">Log out</a>
+                    </div>
+            </div>
+        </div>
+    </nav>
+
         
         <div class = "burger">
             <div class = "line1"></div>
@@ -93,76 +95,160 @@
             </div>
         </div>
     </div>
-    
-       
-        <h2 class = "text-4xl">Transaction History</h2>
-       <!--Table-->
-        <table class="table table-hover table-fixed" id="ca-trans-history-table">
-        <!--Table head-->
-            <thead class = "header" style = "background-color:#00364D; color: white;">
-                <tr>
-                    <th>Reference No.</th>
-                    <th>Time Stamp</th>
-                    <th>Date</th>
-                    <th>Description</th>
-                    <th>Credit</th>
-                    <th>Debit</th>
-                    <th>Balance</th>
-                </tr>
-            </thead>
+     
+    <div class = "container mx-auto py-40">
+        <div class = "flex">
+            <h2 class = "flex-1 tem-left text-2xl mt-3 mb-3 font-medium tracking-wide">Transaction History</h2>
+        </div>
+        <div class="flex flex-col">
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                    <div class="shadow-md overflow-hidden border-b border-t border-gray-200 sm:rounded-lg">
+                        <table class="min-w-full divide-y divide-gray-300 bg-ecdarkblue">
+                            <thead>
+                                <tr>
+                                <th class="px-10 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                Reference No.
+                                </th>
+
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider 
+                                bg-ecdarkblue">
+                                Time Stamp
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                Date
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                Description
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                Credit
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                Debit
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                Balance
+                                </th>
+                            </thead>
 
             <!--Table body-->
-            <tbody>
-                    <tr>
-                        <td> 12345696 </td>                    
-                        <td> 14:10 </td>
-                        <td> 2/27/2020 </td>
-                        <td> Honey Glazed Pork</td>
-                        <td> 50.00</td>
-                        <td> 0.00</td>
-                        <td> 1550.00</td>
-                    </tr>
-                    <tr>
-                        <td> 12345699 </td>                    
-                        <td> 13:11 </td>
-                        <td> 2/27/2020 </td>
-                        <td> Pork Tonkatsu</td>
-                        <td> 50.00</td>
-                        <td> 0.00</td>
-                        <td> 1500.00</td>
-                    </tr>
-                    <tr>
-                        <td> 12345700 </td>                    
-                        <td> 13:00 </td>
-                        <td> 2/27/2020 </td>
-                        <td> Brownies </td>
-                        <td> 25.00</td>
-                        <td> 0.00</td>
-                        <td> 1450.00</td>
+            <tbody class="bg-white divide-y divide-gray-200">
+              
+              <!--First Row-->
+              <tr>
+              <td class="px-6 py-4 whitespace-no-wrap">
+                                        <div class="flex items-center">
+                                            <div class="ml-4">
+                                                <div class="text-sm leading-5 font-medium text-gray-900">
+                                                12345696
+                                                </div>
+                </td>                  
+                <td class="px-6 py-4 whitespace-no-wrap">
+                         <div class="text-sm leading-5 text-gray-900"> 14:10 </div> 
+                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                         2/27/2020 
+                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                        Honey Glazed Pork
+                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                        50.00
+                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                        0.00
+                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                        1550.00
+                </td>
+                </tr>
 
+                <!--Second Row-->
+                <tr>
+                <td class="px-6 py-4 whitespace-no-wrap">
+                                        <div class="flex items-center">
+                                            <div class="ml-4">
+                                                <div class="text-sm leading-5 font-medium text-gray-900">
+                                                12345699
+                                                </div>
+                </td>                  
+                <td class="px-6 py-4 whitespace-no-wrap">
+                         <div class="text-sm leading-5 text-gray-900"> 13:11</div> 
+                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                         2/27/2020 
+                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                        Pork Tonkatsu
+                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                        50.00
+                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                        0.00
+                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                        1500.00
+                </td>
+                </tr>
 
-                     </tr>
-                    <tr>
-                        <td> 12345701 </td>                    
-                        <td> 12:05 </td>
-                        <td> 2/27/2020 </td>
-                        <td> Withdrawal </td>
-                        <td> 0.00</td>
-                        <td> 1000.00</td>
-                        <td> 1425.00</td>
+                <!--Third Row-->
+                <tr>
+                 <td class="px-6 py-4 whitespace-no-wrap">
+                                        <div class="flex items-center">
+                                            <div class="ml-4">
+                                                <div class="text-sm leading-5 font-medium text-gray-900">
+                                                12345700
+                                                </div>
+                </td>                  
+                <td class="px-6 py-4 whitespace-no-wrap">
+                         <div class="text-sm leading-5 text-gray-900"> 13:00</div> 
+                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                         2/27/2020 
+                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                        Brownies
+                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                         25.00
+                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                        0.00
+                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                        1450.00
+                </td>
+                </tr>
 
-                    </tr>
-                    <tr>
-                        <br>
-                        <td> 12345702 </td>                    
-                        <td> 11:10 </td>
-                        <td> 2/27/2020 </td>
-                        <td> Honey Glazed Pork</td>
-                        <td> 100.00</td>
-                        <td> 0.00</td>
-                        <td> 2425.00</td>
-
-                    </tr>
+                <!--Fourth Row-->
+                <td class="px-6 py-4 whitespace-no-wrap">
+                                        <div class="flex items-center">
+                                            <div class="ml-4">
+                                                <div class="text-sm leading-5 font-medium text-gray-900">
+                                                12345701
+                                                </div>
+                </td>                  
+                <td class="px-6 py-4 whitespace-no-wrap">
+                         <div class="text-sm leading-5 text-gray-900"> 11:10</div> 
+                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                         2/27/2020 
+                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                        Honey Glazed Pork
+                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                        100.00
+                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                        0.00
+                </td>
+                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                        2425.00
+                </td>
+                </tr>
             </tbody>
         </table>
     </div>
