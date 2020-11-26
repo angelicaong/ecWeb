@@ -53,7 +53,8 @@
     <div class = "container mx-auto py-4">
         <div class = "flex">
             <h2 class = "flex-1 tem-left text-2xl mt-3 mb-3 font-medium tracking-wide">Concessionare Accounts </h2>
-            <button type="button" class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-sm border border-gray-400 text-sm text-gray-300 uppercase tracking-wider hover:bg-gray-300">Add account</button>
+            <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-sm border border-gray-400 text-sm text-gray-300 hover:text-white uppercase tracking-wider hover:bg-ecgray hover:no-underline hover:text-ecwhite" href="add-concessionaire.php">Add concessionaire</button>
+            <a class="flex-initial item-right text-center h-10 my-auto mx-2 px-3 py-2 rounded-md shadow-sm border border-gray-400 hover:no-underline hover:text-ecwhite hover:bg-ecgray text-sm uppercase tracking-wider" href="add-account.php">Add account</a>
         </div>
         <div class="flex flex-col">
             <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -111,10 +112,10 @@
                                         Admin
                                     </td>
                                     <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
-                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:text-gray-300 uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Edit</button>
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:bg-ecgray uppercase tracking-wider bg-eclightblue hover:bg-gray-300 hover:no-underline" href="edit-account.php">Edit</button>
                                     </td>
                                     <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
-                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:text-gray-300 uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Delete</button>
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:bg-ecgray uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Delete</button>
                                     </td>
                                 </tr>
 
@@ -147,10 +148,10 @@
                                         Admin
                                     </td>
                                     <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
-                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:text-gray-300 uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Edit</button>
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:bg-ecgray uppercase tracking-wider bg-eclightblue hover:bg-gray-300 hover:no-underline" href="edit-account.php">Edit</button>
                                     </td>
                                     <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
-                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:text-gray-300 uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Delete</button>
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:bg-ecgray uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Delete</button>
                                     </td>
                                 </tr>
 
@@ -183,10 +184,10 @@
                                         Admin
                                     </td>
                                     <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
-                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:text-gray-300 uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Edit</button>
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:bg-ecgray uppercase tracking-wider bg-eclightblue hover:bg-gray-300 hover:no-underline" href="edit-account.php">Edit</button>
                                     </td>
                                     <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
-                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:text-gray-300 uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Delete</button>
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:bg-ecgray uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Delete</button>
                                     </td>
                                 </tr>
 
@@ -219,10 +220,10 @@
                                         Admin
                                     </td>
                                     <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
-                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:text-gray-300 uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Edit</button>
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:bg-ecgray uppercase tracking-wider bg-eclightblue hover:bg-gray-300 hover:no-underline" href="edit-account.php">Edit</button>
                                     </td>
                                     <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
-                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:text-gray-300 uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Delete</button>
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:bg-ecgray uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Delete</button>
                                     </td>
                                 </tr>
 
@@ -238,3 +239,4 @@
 
     <script src="../resources/js/ecWeb.js"></script>
    </body>
+   </html>

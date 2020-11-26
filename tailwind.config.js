@@ -4,12 +4,15 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
 
   theme: {
-    textColor: theme => theme('colors'),
-    textColor: {
-      'eclightblue' : '#00a4d2',
-      'ecdarkblue': '#02364d',
-    }
+    colors: {
+      eclightblue: "var(--color-eclightblue)",
+      ecdarkblue: "var(--color-ecdarkblue)",
+      ecwhite: "var(--color-ecwhite)",
+      ecgray: "var(--color-ecgray)",
+    },
+    extend: {},
   },
+
 
   variants: {
     extend: {
