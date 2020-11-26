@@ -18,7 +18,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Tailwind CSS -->
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="../resources/css/public/styles.css" rel="stylesheet">
     <!-- additional chuchu -->
     <link rel="shortcut icon" type="image" href="../resources/images/ec-logo-only.png" />
     <link rel="stylesheet" href="../resources/css/main.css">
@@ -30,185 +30,372 @@
 
    <header class="new-navbar">
         <a href="home.php">
-            <img class = "new-navbar-logo" src= "../resources/images/ec-logo-white.png" alt="" height="60px" width="140px" >
+            <img class = "new-navbar-logo" src= "../resources/images/ec-logo-white.png" alt="" height="50px" width="100px" >
         </a>
         <nav>
             <ul class="new-nav-area">
                 <li><a href="home.php">Home</a></li>
                 <li><a href="accounts.php">Accounts</a></li>
-                <li><a class="new-navbar-apage" href="transaction.php">Transactions</a></li>
+                <li><a class = "active-navbar" href="transaction.php">Transactions</a></li>
                 <li><a href="menu.php">Menu</a></li>
+                <li><a href="../resources/php/logout.php">Logout</a></li>
             </ul>
         </nav>
-        <a class ="new-navbar-btn-area" href="../resources/php/logout.php">
-            <img src="../resources/images/logout.png" class ="w-5 h-5 my-auto float-left" id="logout-icon">Log Out
-        </a> 
         <div class = "burger">
             <div class = "line1"></div>
             <div class = "line2"></div>
             <div class = "line3"></div>
         </div>
+        
     </header>
 </div>
 <div class ="container">
     <h3 class = "text-4xl text-center mb-2">Transaction History</h3>
 
-    <!--Table-->
-     <table class="table table-hover table-fixed" id="ca-trans-history-table">
-     <!--Table head-->
-         <thead class = "header" style = "background-color:#00364D; color: white;">
-             <tr>
-                <th>Reference No.</th>
-                <th>Time</th>
-                <th>Date</th>
-                <th>Description</th>
-                <th>Credit</th>
-                <th>Debit</th>
-                <th>Balance</th>
-             </tr>
-         </thead>
+    <div class="flex flex-col sm:mt-3 md:mt-0">
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                    <div class="shadow-md overflow-hidden border-b border-t border-gray-200 sm:rounded-lg">
+                        <table class="min-w-full divide-y divide-gray-300 bg-ecdarkblue">
+                            <thead>
+                                <tr>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                        Reference No.
+                                    </th>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                        Date
+                                    </th>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                        Time
+                                    </th>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                        Description
+                                    </th>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                        Credit
+                                    </th>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                        Debit
+                                    </th>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                        Balance
+                                    </th>
 
-         <!--Table body-->
-                 <tr>
-                        <td> 12345696 </td>                    
-                        <td> 14:10 </td>
-                        <td> 2/27/2020 </td>
-                        <td> Alignay, Rissha Jhie-Ann</td>
-                        <td> 50.00</td>
-                        <td> 0.00</td>
-                        <td> 1550.00</td>
-                    </tr>
-                    <tr>
-                        <td> 12345699 </td>                    
-                        <td> 13:11 </td>
-                        <td> 2/27/2020 </td>
-                        <td> Paez, Christine Anne</td>
-                        <td> 50.00</td>
-                        <td> 0.00</td>
-                        <td> 1500.00</td>
-                    </tr>
-                    <tr>
-                        <td> 12345700 </td>                    
-                        <td> 13:00 </td>
-                        <td> 2/27/2020 </td>
-                        <td> Ong, Angelica Farrah Mae </td>
-                        <td> 25.00</td>
-                        <td> 0.00</td>
-                        <td> 1450.00</td>
+                                </tr>
+                            </thead>
 
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                
+                                <!-- 1st row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1012202001
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        10/12/2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        14:10
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Alignay, Rissha Jhie-Ann
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        50.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        0.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1550.00
+                                    </td>
+                                </tr>
 
-                     </tr>
-                    <tr>
-                        <td> 12345701 </td>                    
-                        <td> 12:05 </td>
-                        <td> 2/27/2020 </td>
-                        <td> Withdrawal </td>
-                        <td> 0.00</td>
-                        <td> 1000.00</td>
-                        <td> 1425.00</td>
+                                <!-- 2nd row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1012202002
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        10/12/2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        13:11
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Paez, Christine Anne
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        50.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        0.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1500.00
+                                    </td>
+                                </tr>
+                                                                    
+                                    <!-- 3rd row -->
+                                    <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1012202003
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        10/12/2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        13:00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Ong, Angelica Farrah Mae
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        25.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        0.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1450.00
+                                    </td>
+                                </tr>
 
-                    </tr>
-                    <tr>
-                        <br>
-                        <td> 12345702 </td>                    
-                        <td> 11:10 </td>
-                        <td> 2/27/2020 </td>
-                        <td> Castillo, Kit Alejandro</td>
-                        <td> 100.00</td>
-                        <td> 0.00</td>
-                        <td> 2425.00</td>
+                                <!-- 4th row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1012202004
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        10/12/2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        12:05
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Withdrawal
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        0.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1000.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1425.00
+                                    </td>
+                                </tr>
 
-                    </tr>
-                    
-                    <tr>
-                    <td> 12345900 </td>                    
-                    <td> 18:30 </td>
-                    <td> 2/25/2020 </td>
-                    <td> Alignay, Rissha Jhie-Ann</td>
-                    <td> 50.00</td>
-                    <td> 0.00</td>
-                    <td> 2325.00</td>
-                    </tr>
-                    
-                    <tr>
-                    <td> 12345901 </td>                    
-                    <td> 16:50 </td>
-                    <td> 2/25/2020 </td>
-                    <td> Paez, Christine Anne</td>
-                    <td> 100.00</td>
-                    <td> 0.00</td>
-                    <td> 2275.00</td>
-                    </tr>
-                    
-                    <tr>
-                    <td> 12345902 </td>                    
-                    <td> 15:30 </td>
-                    <td> 2/25/2020 </td>
-                    <td> Ong, Angelica Farrah Mae </td>
-                    <td> 75.00</td>
-                    <td> 0.00</td>
-                    <td> 2175.00</td>
-                    </tr>
-                    
-                    <tr>
-                    <td> 12345701 </td>                    
-                    <td> 14:10 </td>
-                    <td> 2/25/2020 </td>
-                    <td> Mirana, Joeben </td>
-                    <td> 120.00</td>
-                    <td> 0.00</td>
-                    <td> 2100.00</td>
+                                <!-- 5th row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1012202005
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        10/12/2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        11:10
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Castillo, Kit Alejandro
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        100.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        0.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        2425.00
+                                    </td>
+                                </tr>
 
-                    </tr>
-                    <tr>
+                                <!-- 6th row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1012202006
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        10/11/2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        18:30
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Jara, Denisse Isabela
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        50.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        0.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        2325.00
+                                    </td>
+                                </tr>
 
-                    <td> 12345702 </td>                    
-                    <td> 13:10 </td>
-                    <td> 2/25/2020 </td>
-                    <td> Castillo, Kit Alejandro</td>
-                    <td> 200.00</td>
-                    <td> 0.00</td>
-                    <td> 1980.00</td>
+                                <!-- 7th row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1012202007
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        10/11/2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        16:50
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Cruz, Jefferson
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        100.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        0.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        2275.00
+                                    </td>
+                                </tr>
 
-                    </tr>
-                    <tr>
+                                <!-- 8th row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1012202008
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        10/11/2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        15:30
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Miraña, Joeben
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        120.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        0.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        2100.00
+                                    </td>
+                                </tr>
 
-                    <td> 12345703 </td>                    
-                    <td> 12:20 </td>
-                    <td> 2/25/2020 </td>
-                    <td> Withdrawal</td>
-                    <td> 0.00</td>
-                    <td> 1000.00</td>
-                    <td> 1780.00</td>
+                                <!-- 9th row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1012202010
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        10/11/2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        13:10
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Castillo, Kit Alejandro
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        200.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        0.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1980.00
+                                    </td>
+                                </tr>
 
-                    </tr>
+                                <!-- 10th row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1012202011
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        10/11/2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        12:50
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Withdrawal
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        0.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1000.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1780.00
+                                    </td>
+                                </tr>
 
-                    <tr>
-
-                    <td> 12345704 </td>                    
-                    <td> 10:25 </td>
-                    <td> 2/25/2020 </td>
-                    <td> Santiago, Lyra</td>
-                    <td> 50.00</td>
-                    <td> 0.00</td>
-                    <td> 2780.00</td>
-
-                    </tr>
-
-                    <tr>
-
-                    <td> 12345704 </td>                    
-                    <td> 09:00 </td>
-                    <td> 2/25/2020 </td>
-                    <td> Cruz, Jeff</td>
-                    <td> 45.00</td>
-                    <td> 0.00</td>
-                    <td> 2730.00</td>
-
-                    </tr>
+                            </tbody>
+                        </table>
+                        
+                </div>
+                
+            </div>
+            
+        </div>
         
-        </table>
-       </div>
+    </div>
+
+    <!-- pagination -->
+    <div class="bg-white px-4 py-3 mt-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
+        <div class="flex-1 flex justify-between sm:hidden">
+            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:text-gray-500">
+            Previous
+            </a>
+            <a href="#" class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:text-gray-500">
+            Next
+            </a>
+        </div>
+        <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+            <div>
+                <p class="text-sm text-gray-700">
+                    Showing
+                    <span class="font-medium">1</span>
+                    to
+                    <span class="font-medium">10</span>
+                    of
+                    <span class="font-medium">12</span>
+                    results
+                </p>
+            </div>
+            <div>
+                <nav class="relative z-0 inline-flex shadow-sm -space-x-px" aria-label="Pagination">
+                    <a href="transaction.php" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                    <span class="sr-only">Previous</span>
+                    <!-- Heroicon name: chevron-left -->
+                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    </a>
+                    <a href="transaction.php" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                    1
+                    </a>
+                    <a href="transaction-2.php" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                    2
+                    </a>
+                    <a href="transaction-2.php" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                    <span class="sr-only">Next</span>
+                    <!-- Heroicon name: chevron-right -->
+                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
 
        <script src="../resources/js/ecWeb.js"></script>
     </body>
