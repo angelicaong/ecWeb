@@ -51,19 +51,19 @@
     </nav>
 
     <div class = "container mx-auto py-4">
-        <div class = "flex">
-            <h2 class = "flex-1 tem-left text-2xl mt-3 mb-3 font-medium tracking-wide">Concessionare Accounts </h2>
-            <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-sm border border-gray-400 text-sm text-gray-300 hover:text-white uppercase tracking-wider hover:bg-ecgray hover:no-underline hover:text-ecwhite" href="add-concessionaire.php">Add concessionaire</button>
-            <a class="flex-initial item-right text-center h-10 my-auto mx-2 px-3 py-2 rounded-md shadow-sm border border-gray-400 hover:no-underline hover:text-ecwhite hover:bg-ecgray text-sm uppercase tracking-wider" href="add-account.php">Add account</a>
+        <div class = "flex flex-col sm:flex-row">
+            <h2 class = "flex-1 text-2xl sm:mt-3 mb-3 font-medium tracking-wide">Concessionare Accounts </h2>
+            <a class="flex-initial text-center h-10 mx-2 px-3 py-2 rounded-md shadow-sm border border-gray-600 hover:no-underline hover:text-ecwhite hover:bg-ecgray text-sm uppercase tracking-wider mb-2 sm:my-auto" href="add-concessionaire.php">Add concessionaire</button>
+            <a class="flex-initial text-center h-10 mx-2 px-3 py-2 rounded-md shadow-sm border border-gray-600 hover:no-underline hover:text-ecwhite hover:bg-ecgray text-sm uppercase tracking-wider mb-2 sm:my-auto " href="add-account.php">Add account</a>
         </div>
-        <div class="flex flex-col">
+        <div class="flex flex-col sm:mt-3 md:mt-0">
             <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                     <div class="shadow-md overflow-hidden border-b border-t border-gray-200 sm:rounded-lg">
                         <table class="min-w-full divide-y divide-gray-300 bg-ecdarkblue">
                             <thead>
                                 <tr>
-                                <th class="px-10 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
                                     Name
                                 </th>
                                 <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
@@ -85,20 +85,20 @@
                             <tbody class="bg-white divide-y divide-gray-200">
                                 <!-- 1st row -->
                                 <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Park Chaeyoung
+                                    </td>
                                     <td class="px-6 py-4 whitespace-no-wrap">
                                         <div class="flex items-center">
-                                            <div class="ml-4">
-                                                <div class="text-sm leading-5 font-medium text-gray-900">
-                                                Hazel Cruz
+                                            <div>
+                                                <div class="text-sm leading-5 text-gray-900">
+                                                1213 Diner
                                                 </div>
                                                 <div class="text-sm leading-5 text-gray-500">
                                                 1213diner@gmail.com
                                                 </div>
                                             </div>
                                         </div>
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-no-wrap">
-                                        <div class="text-sm leading-5 text-gray-900">1218 Diner</div> 
                                     </td>
                                     <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
                                         20193
@@ -121,20 +121,20 @@
 
                                 <!-- 2nd row -->
                                 <tr>
-                                    <td class="px-6 py-4 whitespace-no-wrap">
-                                        <div class="flex items-center">
-                                            <div class="ml-4">
-                                                <div class="text-sm leading-5 font-medium text-gray-900">
-                                                Analiza Mendez
-                                                </div>
-                                                <div class="text-sm leading-5 text-gray-500">
-                                                cafearchive@gmail.com
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Lalisa Manoban
                                     </td>
                                     <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                                        Cafe Archive
+                                        <div class="flex items-center">
+                                                <div>
+                                                    <div class="text-sm leading-5 text-gray-900">
+                                                    Cafe Archive
+                                                    </div>
+                                                    <div class="text-sm leading-5 text-gray-500">
+                                                    cafearchive@gmail.com
+                                                    </div>
+                                                </div>
+                                            </div>
                                     </td>
                                     <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
                                         20194
@@ -157,20 +157,20 @@
 
                                 <!-- 3rd row -->
                                 <tr>
-                                    <td class="px-6 py-4 whitespace-no-wrap">
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Kim Jennie
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
                                         <div class="flex items-center">
-                                            <div class="ml-4">
-                                                <div class="text-sm leading-5 font-medium text-gray-900">
-                                                Cara Hokkaido
+                                            <div>
+                                                <div class="text-sm leading-5 text-gray-900">
+                                                3rd Floor
                                                 </div>
                                                 <div class="text-sm leading-5 text-gray-500">
                                                 3rdfloor@gmail.com
                                                 </div>
                                             </div>
                                         </div>
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                                        3rd Floor
                                     </td>
                                     <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
                                         20192
@@ -193,20 +193,20 @@
 
                                 <!-- 4throw -->
                                 <tr>
-                                    <td class="px-6 py-4 whitespace-no-wrap">
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Kim Jisoo
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
                                         <div class="flex items-center">
-                                            <div class="ml-4">
-                                                <div class="text-sm leading-5 font-medium text-gray-900">
-                                                Jerry Okinawa
+                                            <div>
+                                                <div class="text-sm leading-5 text-gray-900">
+                                                Greens
                                                 </div>
                                                 <div class="text-sm leading-5 text-gray-500">
                                                 greens@gmail.com
                                                 </div>
                                             </div>
                                         </div>
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                                        Greens
                                     </td>
                                     <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
                                         20191

@@ -53,8 +53,6 @@
     <div class = "container mx-auto py-4">
         <div class = "flex">
             <h2 class = "flex-1 tem-left text-2xl mt-3 mb-3 font-medium tracking-wide">Concessionare Accounts </h2>
-            <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-sm border border-gray-400 text-sm text-gray-300 hover:text-white uppercase tracking-wider hover:bg-ecgray hover:no-underline hover:text-ecwhite" href="add-concessionaire.php">Add concessionaire</button>
-            <a class="flex-initial item-right text-center h-10 my-auto mx-2 px-3 py-2 rounded-md shadow-sm border border-gray-400 hover:no-underline hover:text-ecwhite hover:bg-ecgray text-sm uppercase tracking-wider" href="add-account.php">Add account</a>
         </div>
         <div class="flex flex-col">
             <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -63,60 +61,55 @@
                         <table class="min-w-full divide-y divide-gray-300 bg-ecdarkblue">
                             <thead>
                                 <tr>
-                                <th class="px-10 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
-                                    Name
-                                </th>
-                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
-                                    Concessionaire
-                                </th>
-                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
-                                    Username
-                                </th>
-                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
-                                    Status
-                                </th>
-                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
-                                    Role
-                                </th>
-                                <th class="px-6 py-3 bg-gray-50 bg-ecdarkblue"></th>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                        Name
+                                    </th>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                        Concessionaire
+                                    </th>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                        Username
+                                    </th>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                        Status
+                                    </th>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                        Role
+                                    </th>
                                 </tr>
                             </thead>
 
                             <tbody class="bg-white divide-y divide-gray-200">
                                 <!-- 1st row -->
                                 <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        <input type = "text" class = "w-full" value = "Park Chaeyoung">
+                                    </td>
                                     <td class="px-6 py-4 whitespace-no-wrap">
                                         <div class="flex items-center">
-                                            <div class="ml-4">
+                                            <div>
                                                 <div class="text-sm leading-5 font-medium text-gray-900">
-                                                Hazel Cruz
+                                                    <input type = "text" class = "w-full" value = "1218 Diner">
                                                 </div>
                                                 <div class="text-sm leading-5 text-gray-500">
-                                                1213diner@gmail.com
+                                                    <input type = "text" class = "w-full" value = "1213diner@gmail.com"> 
                                                 </div>
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="px-6 py-4 whitespace-no-wrap">
-                                        <div class="text-sm leading-5 text-gray-900">1218 Diner</div> 
-                                    </td>
                                     <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                                        20193
+                                        <input type = "text" class = "w-full" value = "20193">
                                     </td>
                                     <td class="px-6 py-4 whitespace-no-wrap">
-                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                        Active
-                                        </span>
+                                        <select class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full w-full {{'status'== "Active" ? bg-green-100 text-green-800 : bg-red-100 text-red-100}}" name="status">
+                                            <option>Active</option>
+                                            <option>Inactive</option> 
+                                        </select>
                                     </td>
                                     <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                                        Admin
+                                        <input type = "text" class = "w-full" value = "Admin">
                                     </td>
-                                    <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
-                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:bg-ecgray uppercase tracking-wider bg-eclightblue hover:bg-gray-300 hover:no-underline" href="edit-account.php">Edit</button>
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
-                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:bg-ecgray uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Delete</button>
-                                    </td>
+                                    
                                 </tr>
 
                             </tbody>
@@ -127,9 +120,9 @@
         </div>
     </div>
 
-        <div class = "buttons-save-back">
-         <button type="submit" onclick="window.location.href='home.php'"class="btn btn-success" id="save-new-acc"><img src="../resources/images/save.png" class ="w-5 h-5 my-auto float-left" id="save-icon">Save</button>
-         <button type="submit" onclick="window.location.href='home.php'"class="btn btn-success" id="back-new-acc">Back</button>    
+        <div class = "flex flex-col ml-2 mr-2 sm:flex-row md:flex-row lg:flex-row xl:flex-row justify-center sm:justify-end md:pr-5 lg:pr-10 xl:pr-14">
+            <button class="flex-initial text-center mb-1 mx-2 px-3 py-2 rounded-md shadow-sm border border-gray-600 hover:no-underline text-ecwhite bg-ecgray text-sm uppercase tracking-wider" onclick="window.location.href='home.php'">Back</button>
+            <button class="flex-initial text-center mb-1 mx-2 px-3 py-2 rounded-md shadow-sm border border-gray-600 bg-eclightblue text-white hover:no-underline hover:text-ecwhite hover:bg-ecgray text-sm uppercase tracking-wider" onclick="window.location.href='home.php'"><img src="../resources/images/save.png" class ="w-4 h-4 my-auto mr-2 inline">Save</button>
         </div>
     <script src="../resources/js/ecWeb.js"></script>
    </body>
