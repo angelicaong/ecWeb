@@ -30,14 +30,25 @@
     </head>
     
    <body>
-   <header class="new-navbar">
-        <a href="home.php">
-            <img class = "new-navbar-logo" src= "../resources/images/ec-logo-white.png" alt="" height="60px" width="140px" >
-        </a>
-        <a class ="new-navbar-btn-area" href="../resources/php/logout.php">
-            <img src="../resources/images/logout.png" class ="w-5 h-5 my-auto float-left" id="logout-icon">Log Out
-        </a> 
-    </header>
+   <nav class="bg-ecdarkblue mb-10"> 
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                <div class="flex-1 flex sm:items-stretch sm:justify-start">
+                    <a class="flex items-center" href="home.php" >
+                        <img class="block h-10 w-auto pl-4" src= "../resources/images/ec-logo-white-new.png" alt="EC Card logo">
+                    </a>
+                </div>  
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:pr-0">
+                    <div class="relative px-3 py-2 font-medium rounded-md text-sm" >
+                        <a class = "text-white tracking-wide " href="../resources/php/logout.php">Log out</a>
+                    </div>
+                    
+                
+                
+                </div>
+            </div>
+        </div>
+    </nav>
     
     <div class ="container" id="cc-main">
        <div class ="cc-menu">
