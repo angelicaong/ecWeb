@@ -1,0 +1,17 @@
+/* ./your-css-folder/styles.css */
+:root {
+    --color-eclightblue: #00a4d2;
+    --color-ecdarkblue: #02364d;
+    --color-ecwhite: #fff;
+    --color-ecgray: rgb(163, 162, 162);
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-200px {
+    font-size: 200px;
+}
+  
