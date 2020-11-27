@@ -18,7 +18,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Tailwind CSS -->
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="../resources/css/public/styles.css" rel="stylesheet">
     <!-- additional chuchu -->
     <link rel="shortcut icon" type="image" href="../resources/images/ec-logo-only.png" />
     <link rel="stylesheet" href="../resources/css/main.css">
@@ -29,19 +29,17 @@
    <body>
    <header class="new-navbar">
         <a href="home.php">
-            <img class = "new-navbar-logo" src= "../resources/images/ec-logo-white.png" alt="" height="60px" width="140px" >
+            <img class = "new-navbar-logo" src= "../resources/images/ec-logo-white.png" alt="" height="50px" width="100px" >
         </a>
         <nav>
             <ul class="new-nav-area">
                 <li><a href="home.php">Home</a></li>
-                <li><a class="new-navbar-apage" href="accounts.php">Accounts</a></li>
+                <li><a class = "active-navbar" href="accounts.php">Accounts</a></li>
                 <li><a href="transaction.php">Transactions</a></li>
                 <li><a href="menu.php">Menu</a></li>
+                <li><a href="../resources/php/logout.php">Logout</a></li>
             </ul>
         </nav>
-        <a class ="new-navbar-btn-area" href="../resources/php/logout.php">
-            <img src="../resources/images/logout.png" class ="w-5 h-5 my-auto float-left" id="logout-icon">Log Out
-        </a> 
         <div class = "burger">
             <div class = "line1"></div>
             <div class = "line2"></div>
@@ -49,48 +47,103 @@
         </div>
         
     </header>
-    
-    <div class="container">
-        <div class = "manage-div">
-            <span class = "text-4xl mb-2" id="span-accounts">Concessionaire Cashier Accounts</span> 
-            <button type="submit" onclick="window.location.href='add-account.php'"class="btn btn-success" id="add-new-acc"><img src="../resources/images/add.png" height="20px" width="20px" id="add-icon"></button>
+
+    <div class = "container mx-auto py-4">
+        <div class = "flex flex-col sm:flex-row">
+            <h2 class = "flex-1 text-2xl sm:mt-3 mb-3 font-medium tracking-wide">Concessionare Cashier Accounts </h2>
+            <a class="flex-initial text-center h-10 mx-2 px-3 py-2 rounded-md shadow-sm border border-gray-600 hover:no-underline hover:text-ecwhite hover:bg-ecgray text-sm uppercase tracking-wider mb-2 sm:my-auto " href="add-account.php">Add account</a>
         </div>
-                
-        <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Username</th>
-                <th>Status</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
-            <tbody>
-            <tr>
-                <td>Amaya Skye</td>
-                <td>20324</td>
-                <td id="admin-active-status">Active</td>
-                <td><a href="edit-account.php"><img src ="../resources/images/edit.png" height="20px" width="20px" id="edit-icon"></a></td>
-                <td><img src ="../resources/images/delete.png" height="20px" width="20px" id="delete-icon"></td>
-            </tr>
-            <tr>
-                <td>Ana Dez</td>
-                <td>20324</td>
-                <td id="admin-active-status">Active</td>
-                <td><a href="edit-account.php"><img src ="../resources/images/edit.png" height="20px" width="20px" id="edit-icon"></a></td>
-                <td><img src ="../resources/images/delete.png" height="20px" width="20px" id="delete-icon"></td>
-            </tr>
-            <tr>
-                <td>Julian Alano</td>
-                <td>20346</td>
-                <td id="admin-inactive-status">Inactive</td>
-                <td><a href="edit-account.php"><img src ="../resources/images/edit.png" height="20px" width="20px" id="edit-icon"></a></td>
-                <td><img src ="../resources/images/delete.png" height="20px" width="20px" id="delete-icon"></td>
-            </tr>
-            
-            </tbody>
-        </table>
+        <div class="flex flex-col sm:mt-3 md:mt-0">
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                    <div class="shadow-md overflow-hidden border-b border-t border-gray-200 sm:rounded-lg">
+                        <table class="min-w-full divide-y divide-gray-300 bg-ecdarkblue">
+                            <thead>
+                                <tr>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                    Name
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                    Username
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                    Status
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50 bg-ecdarkblue"></th>
+                                <th class="px-6 py-3 bg-gray-50 bg-ecdarkblue"></th>
+                                </tr>
+                            </thead>
+
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <!-- 1st row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Kim Taehyung
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        20324
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                        Active
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:bg-ecgray uppercase tracking-wider bg-eclightblue hover:bg-gray-300 hover:no-underline" href="edit-account.php">Edit</button>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:bg-ecgray uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Delete</button>
+                                    </td>
+                                </tr>
+
+                                <!-- 2nd row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Jeon Jungkook
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        20325
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                        Active
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:bg-ecgray uppercase tracking-wider bg-eclightblue hover:bg-gray-300 hover:no-underline" href="edit-account.php">Edit</button>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:bg-ecgray uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Delete</button>
+                                    </td>
+                                </tr>
+
+                                <!-- 3rd row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Park Jimin
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        20346
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap">
+                                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-gray-100 text-gray-500">
+                                        Inactive
+                                        </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:bg-ecgray uppercase tracking-wider bg-eclightblue hover:bg-gray-300 hover:no-underline" href="edit-account.php">Edit</button>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:bg-ecgray uppercase tracking-wider bg-eclightblue hover:bg-gray-300">Delete</button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     
     <script src="../resources/js/ecWeb.js"></script>

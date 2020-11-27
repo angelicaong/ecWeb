@@ -18,7 +18,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Tailwind CSS -->
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="../resources/css/public/styles.css" rel="stylesheet">
     <!-- additional chuchu -->
     <link rel="shortcut icon" type="image" href="../resources/images/ec-logo-only.png" />
     <link rel="stylesheet" href="../resources/css/main.css">
@@ -26,22 +26,20 @@
     
     </head>
     
-   <body style="min-width: 770px; margin: 0 auto;">
+   <body>
    <header class="new-navbar">
         <a href="home.php">
-            <img class = "new-navbar-logo" src= "../resources/images/ec-logo-white.png" alt="" height="60px" width="140px" >
+            <img class = "new-navbar-logo" src= "../resources/images/ec-logo-white.png" alt="" height="50px" width="100px" >
         </a>
         <nav>
             <ul class="new-nav-area">
                 <li><a href="home.php">Home</a></li>
-                <li><a class="new-navbar-apage" href="accounts.php">Accounts</a></li>
+                <li><a class = "active-navbar" href="accounts.php">Accounts</a></li>
                 <li><a href="transaction.php">Transactions</a></li>
                 <li><a href="menu.php">Menu</a></li>
+                <li><a href="../resources/php/logout.php">Logout</a></li>
             </ul>
         </nav>
-        <a class ="new-navbar-btn-area" href="../resources/php/logout.php">
-            <img src="../resources/images/logout.png" class ="w-5 h-5 my-auto float-left" id="logout-icon">Log Out
-        </a> 
         <div class = "burger">
             <div class = "line1"></div>
             <div class = "line2"></div>
@@ -49,35 +47,64 @@
         </div>
         
     </header>
-    
-    <div class="container">
-        <div class = "manage-div">
-            <span id="span-accounts">Manage Accounts</span>
+
+    <div class = "container mx-auto py-4">
+        <div class = "flex flex-col sm:flex-row">
+            <h2 class = "flex-1 text-2xl sm:mt-3 mb-3 font-medium tracking-wide">Concessionare Cashier Accounts </h2>
         </div>
-        <table class="table table-bordered table-responsive-md table-striped text-center">
-        <thead>
-             <tr>
-                <th>Name</th>
-                <th>Username</th>
-                <th>Password</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>                
-                <td class="pt-3-half" contenteditable="true"></td>
-                <td class="pt-3-half">20357</td>
-                <td class="hidetext" contenteditable="true"></td>
-                <td class="pt-3-half" contenteditable="true" id="admin-active-status">Active</td>
-            </tr>
-        </tbody>
-        </table>
-        <div class = "buttons-save-back">
-         <button type="submit" onclick="window.location.href='accounts.php'"class="btn btn-success" id="save-new-acc"><img src="../resources/images/save.png" class ="w-6 h-6 my-auto float-left" id="save-icon">Save</button>
-         <button type="submit" onclick="window.location.href='accounts.php'"class="btn btn-success" id="back-new-acc">Back</button>    
+        <div class="flex flex-col sm:mt-3 md:mt-0">
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                    <div class="shadow-md overflow-hidden border-b border-t border-gray-200 sm:rounded-lg">
+                        <table class="min-w-full divide-y divide-gray-300 bg-ecdarkblue">
+                            <thead>
+                                <tr>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                    Name
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                    Username
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                    Password
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                    Status
+                                </th>
+    
+                                </tr>
+                            </thead>
+
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <!-- 1st row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        <input type="text" class = "w-full" value=""></input>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900 cursor-not-allowed">
+                                    20327
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        <input type="password" class = "w-full" placeholder="********"></input>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap">
+                                        <select class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full w-full {{'status'== "Active" ? bg-green-100 text-green-800 : bg-red-100 text-red-100}}" name="status">
+                                            <option>Active</option>
+                                            <option>Inactive</option> 
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class = "flex flex-col ml-2 mr-2 sm:flex-row md:flex-row lg:flex-row xl:flex-row justify-center sm:justify-end md:pr-5 lg:pr-10 xl:pr-14">
+            <button class="flex-initial text-center mb-1 mx-2 px-3 py-2 rounded-md shadow-sm border border-gray-600 hover:no-underline text-ecwhite bg-ecgray text-sm uppercase tracking-wider" onclick="window.location.href='accounts.php'">Back</button>
+            <button class="flex-initial text-center mb-1 mx-2 px-3 py-2 rounded-md shadow-sm border border-gray-600 bg-eclightblue text-white hover:no-underline hover:text-ecwhite hover:bg-ecgray text-sm uppercase tracking-wider" onclick="window.location.href='accounts.php'"><img src="../resources/images/save.png" class ="w-4 h-4 my-auto mr-2 inline">Save</button>
+        </div>
+    <script src="../resources/js/ecWeb.js"></script>
    </body>
-   
-   <script src="../resources/js/ecWeb.js"></script>
-</html>
