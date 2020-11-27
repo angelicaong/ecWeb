@@ -169,7 +169,7 @@
                                             <div class="ml-4">
                                                 <div class="text-sm leading-5 font-medium text-gray-900">
                                                 12345699
-                                                </div>
+                                            </div>
                 </td>                  
                 <td class="px-6 py-4 whitespace-no-wrap">
                          <div class="text-sm leading-5 text-gray-900"> 13:11</div> 
