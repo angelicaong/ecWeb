@@ -1,54 +1,65 @@
 <?php
 
-	session_start();
-	require_once('../resources/php/session-ca.php');
+    session_start();
+    require_once('../resources/php/session-ca.php');
 
 ?>
 
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="en">
-    <head>
-    <!-- Required meta tags -->
+<head>
+   <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src ="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
     <!-- Tailwind CSS -->
     <link href="../resources/css/public/styles.css" rel="stylesheet">
+
     <!-- additional chuchu -->
     <link rel="shortcut icon" type="image" href="../resources/images/ec-logo-only.png" />
     <link rel="stylesheet" href="../resources/css/main.css">
     <title>Accounts</title>
     
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     </head>
+
     
    <body>
-   <header class="new-navbar">
-        <a href="home.php">
-            <img class = "new-navbar-logo" src= "../resources/images/ec-logo-white.png" alt="" height="50px" width="100px" >
-        </a>
-        <nav>
-            <ul class="new-nav-area">
-                <li><a href="home.php">Home</a></li>
-                <li><a class = "active-navbar" href="accounts.php">Accounts</a></li>
-                <li><a href="transaction.php">Transactions</a></li>
-                <li><a href="menu.php">Menu</a></li>
-                <li><a href="../resources/php/logout.php">Logout</a></li>
-            </ul>
-        </nav>
-        <div class = "burger">
-            <div class = "line1"></div>
-            <div class = "line2"></div>
-            <div class = "line3"></div>
+   <nav class="navbar navbar-default no-margin" id="navbar">
+      <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header fixed-brand">
+            <input type="checkbox" id="menu-toggle"/>
+            <label class = "fas fa-bars" for = "menu-toggle" id="burger-icon"></label>
         </div>
-        
-    </header>
+            
+        <a href="home.php">
+            <img class = "new-navbar-logo" src= "../resources/images/ec-logo-white.png" alt="Logo" height="50px" width="100px" >  
+            <a class = "logout-btn" href="../resources/php/logout.php">Logout</a>
+       </a>       
+      </div>
+   </nav>
+   
+   <div id="wrapper">
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+         <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+            <li><a href="home.php"><span class="fa-stack fa-lg"><i class="fa fa-dashboard fa-stack-1x "></i></span>Dashboard</a></li>
+            <!-- <li><a href="profile.php"><span class="fa-stack fa-lg"><i class="fa fa-user fa-stack-1x"></i></span>Profile</a></li> -->
+            <li class="active-sidebar"><a href="accounts.php"><span class="fa-stack fa-lg"><i class="fa fa-users fa-stack-1x"></i></span>Accounts</a></li>
+            <li><a href="transaction.php"><span class="fa-stack fa-lg"><i class="fa fa-history fa-stack-1x"></i></span>Transactions</a></li>
+         </ul>
+      </div>
+    </div>
 
-    <div class = "container mx-auto py-4">
+    <div class = "container" id="main-content">
         <div class = "flex flex-col sm:flex-row">
             <h2 class = "flex-1 text-2xl sm:mt-3 mb-3 font-medium tracking-wide">Concessionare Cashier Accounts </h2>
         </div>
@@ -66,7 +77,7 @@
                                     Username
                                 </th>
                                 <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
-                                    Password
+                                    Email address
                                 </th>
                                 <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
                                     Status
@@ -85,7 +96,7 @@
                                     20327
                                     </td>
                                     <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                                        <input type="password" class = "w-full" placeholder="********"></input>
+                                        <input type="text" class = "w-full" placeholder=""></input>
                                     </td>
                                     <td class="px-6 py-4 whitespace-no-wrap">
                                         <select class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full w-full {{'status'== "Active" ? bg-green-100 text-green-800 : bg-red-100 text-red-100}}" name="status">

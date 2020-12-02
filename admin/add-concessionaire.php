@@ -1,54 +1,62 @@
 <?php
 
-	session_start();
-	require_once('../resources/php/session-admin.php');
+    session_start();
+    require_once('../resources/php/session-admin.php');
 
 ?>
 
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="en">
-    <head>
-    <!-- Required meta tags -->
+<head>
+   <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src ="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
     <!-- Tailwind CSS -->
     <link href="../resources/css/public/styles.css" rel="stylesheet">
-    <!-- Fontawesome -->
-    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
-    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
-    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">     
+
     <!-- additional chuchu -->
     <link rel="shortcut icon" type="image" href="../resources/images/ec-logo-only.png" />
     <link rel="stylesheet" href="../resources/css/main.css">
-    <title>Home</title>
+    <title>Accounts</title>
     
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     </head>
+
     
    <body>
-    <nav class="bg-ecdarkblue mb-2"> 
-        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-            <div class="relative flex items-center justify-between h-16">
-                <div class="flex-1 flex sm:items-stretch sm:justify-start">
-                    <a class="flex items-center" href="home.php" >
-                        <img class="block h-10 w-auto pl-4" src= "../resources/images/ec-logo-white-new.png" alt="EC Card logo">
-                    </a>
-                </div>  
-                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:pr-0">
-                    <div class="relative px-3 py-2 font-medium rounded-md text-sm" >
-                        <a class = "text-white tracking-wide " href="../resources/php/logout.php">Log out</a>
-                    </div>
-                    
-                
-                </div>
-            </div>
+   <nav class="navbar navbar-default no-margin" id="navbar">
+      <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header fixed-brand">
+            <input type="checkbox" id="menu-toggle"/>
+            <label class = "fa fa-navicon fa-stack-2x" for = "menu-toggle" id="burger-icon"></label>
         </div>
-    </nav>
+            
+        <a href="home.php">
+            <img class = "new-navbar-logo" src= "../resources/images/ec-logo-white.png" alt="Logo" height="50px" width="100px" >  
+            <a class = "logout-btn" href="../resources/php/logout.php">Logout</a>
+       </a>       
+      </div>
+   </nav>
+   
+   <div id="wrapper">
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+         <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+            <li><a href="home.php"><span class="fa-stack fa-lg"><i class="fa fa-dashboard fa-stack-1x "></i></span>Dashboard</a></li>
+            <!-- <li><a href="profile.php"><span class="fa-stack fa-lg"><i class="fa fa-user fa-stack-1x"></i></span>Profile</a></li> -->
+            <li class="active-sidebar"><a href="accounts.php"><span class="fa-stack fa-lg"><i class="fa fa-users fa-stack-1x"></i></span>Accounts</a></li>
+         </ul>
+      </div>
+
 
     <div class = "container mx-auto py-4">
         <div class = "flex">
@@ -65,9 +73,6 @@
                                         Concessionaire
                                     </th>
                                     <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
-                                        Email
-                                    </th>
-                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
                                         Status
                                     </th>
                                 </tr>
@@ -76,9 +81,6 @@
                             <tbody class="bg-white divide-y divide-gray-200">
                                 <!-- 1st row -->
                                 <tr>
-                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                                        <input type = "text" class = "w-full">
-                                    </td>
                                     <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
                                         <input type = "text" class = "w-full">
                                     </td>
