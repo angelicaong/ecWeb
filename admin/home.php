@@ -52,8 +52,9 @@
       <div id="sidebar-wrapper">
          <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
             <li class="active-sidebar"><a href="home.php"><span class="fa-stack fa-lg"><i class="fa fa-dashboard fa-stack-1x "></i></span>Dashboard</a></li>
-            <!-- <li><a href="profile.php"><span class="fa-stack fa-lg"><i class="fa fa-user fa-stack-1x"></i></span>Profile</a></li> -->
+            <li><a href="profile.php"><span class="fa-stack fa-lg"><i class="fa fa-user fa-stack-1x"></i></span>Profile</a></li>
             <li><a href="accounts.php"><span class="fa-stack fa-lg"><i class="fa fa-users fa-stack-1x"></i></span>Accounts</a></li>
+            <li><a href="logs.php"><span class="fa-stack fa-lg"><i class="fa fa-tags fa-stack-1x"></i></span>Logs</a></li>
          </ul>
       </div>
     
@@ -61,6 +62,8 @@
     
     <!-- Main content -->
     <div class = "container" id = "main-content"> 
+
+        <!-- Dashboard 3 boxes -->
         <div class="grid grid-col-1 gap-4 md:grid-cols-3 md:gap-2 lg:grid-cols-3 lg:gap-4 xl:gap-8 ">
             <div class="border-2 border-ecdarkblue rounded-md p-10 h-full text-center shadow overflow-hidden">
                 <h1 class = "font-bold">Active Concessionaires</h1>
@@ -75,16 +78,135 @@
             </div>
 
             <div class="border-2 border-ecdarkblue rounded-md p-10 h-full text-center shadow overflow-hidden">
-                <h1 class = "font-bold">Cashiers</h1>
-                <span class ="text-center text-2xl">3</span>
+                <h1 class = "font-bold">Total Concessionaires</h1>
+                <span class ="text-center text-2xl">4</span>
                 
+            </div>
+        </div>
+
+
+        <!-- Logs table -->
+        <div class = "flex flex-col mt-5 sm:flex-row">
+            <h2 class = "flex-1 text-2xl sm:mt-3 mb-3 font-medium tracking-wide">Logs</h2>
+        </div>
+        <div class="flex flex-col sm:mt-3 md:mt-0">
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                    <div class="shadow-md overflow-hidden border-b border-t border-gray-200 sm:rounded-lg">
+                        <table class="min-w-full divide-y divide-gray-300 bg-ecdarkblue">
+                            <thead>
+                                <tr>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                    Date
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                    Time
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                    User
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                    Concessionaire
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                    Role
+                                </th>
+                            </thead>
+
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <!-- 1st row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        11-07-2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        09:30
+                                    </td>
+                                    
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Jennie Kim
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1218 Diner
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Cashier
+                                    </td>
+                                    
+                                </tr>
+
+                                <!-- 2nd row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        11-07-2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        08:30
+                                    </td>
+                                    
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Lisa Manoban
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Cafe Archive
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Cashier
+                                    </td>
+                                </tr>
+
+                                <!-- 3rd row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        11-07-2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        07:30
+                                    </td>
+                                    
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Jisoo Kim
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1218 Diner
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Admin
+                                    </td>
+                                </tr>
+
+                                <!-- 4th row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        11-07-2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        07:00
+                                    </td>
+                                    
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Rosé Park
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Cafe Archive
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Admin
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
 
         
                     
     </div>
-
+</div>
 
     <script src="../resources/js/ecWeb.js"></script>
    </body>

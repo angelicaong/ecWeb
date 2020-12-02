@@ -404,9 +404,9 @@ header {
     #burger-icon {
         display: none;
     }
-    /* #main-content {
-        margin-left: 270px;
-    } */
+    #main-content {
+        margin: 20px;
+    }
  }
  
 

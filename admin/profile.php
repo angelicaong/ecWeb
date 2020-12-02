@@ -1,7 +1,7 @@
 <?php
 
     session_start();
-    require_once('../resources/php/session-ca.php');
+    require_once('../resources/php/session-admin.php');
 
 ?>
 
@@ -53,19 +53,17 @@
          <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
             <li><a href="home.php"><span class="fa-stack fa-lg"><i class="fa fa-dashboard fa-stack-1x "></i></span>Dashboard</a></li>
             <li class="active-sidebar"><a href="profile.php"><span class="fa-stack fa-lg"><i class="fa fa-user fa-stack-1x"></i></span>Profile</a></li>
-            
-            <li><a href="add-transaction.php"><span class="fa-stack fa-lg"><i class="fa fa-plus fa-stack-1x"></i></span>Add Transaction</a></li>
-            <li><a href="transaction.php"><span class="fa-stack fa-lg"><i class="fa fa-history fa-stack-1x"></i></span>Transactions</a></li>
-
-            <li class = "mt-4 text-gray-400 text-sm ml-3 uppercase tracking-wider">Admin</li>
-            <li><a href="accounts.php"><span class="fa-stack fa-lg"><i class="fa fa-users fa-stack-1x"></i></span>Manage Accounts</a></li>
-            <li><a href="withdraw.php"><span class="fa-stack fa-lg"><i class="fa fa-usd fa-stack-1x"></i></span>Withdraw Balance</a></li>
+            <li><a href="accounts.php"><span class="fa-stack fa-lg"><i class="fa fa-users fa-stack-1x"></i></span>Accounts</a></li>
+            <li><a href="logs.php"><span class="fa-stack fa-lg"><i class="fa fa-tags fa-stack-1x"></i></span>Logs</a></li>
          </ul>
       </div>
+     
 
-    <div class = "container" id="main-content">
-        
-    <div class="mt-6 sm:mt-12">
+    
+    <!-- Main content -->
+    <div class = "container" id = "main-content"> 
+      
+  <div class="mt-6 sm:mt-12">
   <div class="md:grid md:grid-cols-3 md:gap-6">
     <div class="md:col-span-1">
       <div class="px-4 sm:px-0">
@@ -82,22 +80,22 @@
             <div class="grid grid-cols-6 gap-6">
               <div class="col-span-6 sm:col-span-3">
                 <label for="first_name" class="block text-sm font-medium text-gray-700">First name</label>
-                <input type="text" name="first_name" id="first_name" autocomplete="given-name" value = "Jisoo" class="mt-1 border-2 p-2 focus:ring-indigo-500 focus:border-indigo-500  border-black   block w-full sm:text-sm border-gray-300 rounded-md">
+                <input type="text" name="first_name" id="first_name" autocomplete="given-name" value = "Admin" class="mt-1 border-2 p-2 focus:ring-indigo-500 focus:border-indigo-500  border-black   block w-full sm:text-sm border-gray-300 rounded-md">
               </div>
 
               <div class="col-span-6 sm:col-span-3">
                 <label for="last_name" class="block text-sm font-medium text-gray-700">Last name</label>
-                <input type="text" name="last_name" id="last_name" autocomplete="family-name" value = "Kim" class="mt-1 border-2 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                <input type="text" name="last_name" id="last_name" autocomplete="family-name" value = "User" class="mt-1 border-2 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
               </div>
 
               <div class="col-span-6 sm:col-span-3">
                 <label for="first_name" class="block text-sm font-medium text-gray-700">Email Address</label>
-                <input type="text" name="first_name" id="first_name" autocomplete="given-name" value= "jisoo.kim@email.com" class="mt-1 border-2 p-2 focus:ring-indigo-500 focus:border-indigo-500  border-black   block w-full sm:text-sm border-gray-300 rounded-md">
+                <input type="text" name="first_name" id="first_name" autocomplete="given-name" value= "admin@ciit.edu.ph" class="mt-1 border-2 p-2 focus:ring-indigo-500 focus:border-indigo-500  border-black   block w-full sm:text-sm border-gray-300 rounded-md">
               </div>
 
               <div class="col-span-6 sm:col-span-3">
                 <label for="last_name" class="block text-sm font-medium text-gray-700">Phone Number</label>
-                <input type="text" name="last_name" id="last_name" autocomplete="family-name" value = "09171234488" class="mt-1 border-2 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                <input type="text" name="last_name" id="last_name" autocomplete="family-name" value = "09771234482" class="mt-1 border-2 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
               </div>
 
               
@@ -141,7 +139,7 @@
               </div>
 
               <div class="col-span-6 sm:col-span-3">
-                <label for="last_name" class="block text-sm font-medium text-gray-700">Re-enter Password</label>
+                <label for="last_name" class="block text-sm font-medium text-gray-700">Reenter Password</label>
                 <input type="password" name="last_name" id="last_name" autocomplete="family-name" value = "" class="mt-1 border-2 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
               </div>
 
@@ -157,10 +155,10 @@
       </form>
     </div>
 </div>
+         
+     
+    </div>
 
-
-    </div> <!-- end of container -->
-</div> <!-- end of wrapper -->
-    
     <script src="../resources/js/ecWeb.js"></script>
    </body>
+   </html>

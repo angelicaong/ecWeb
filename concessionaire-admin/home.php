@@ -37,7 +37,7 @@
       <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header fixed-brand">
             <input type="checkbox" id="menu-toggle"/>
-            <label class = "fas fa-bars" for = "menu-toggle" id="burger-icon"></label>
+            <label class = "fa fa-navicon fa-stack-2x" for = "menu-toggle" id="burger-icon"></label>
         </div>
             
         <a href="home.php">
@@ -52,17 +52,22 @@
       <div id="sidebar-wrapper">
          <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
             <li class="active-sidebar"><a href="home.php"><span class="fa-stack fa-lg"><i class="fa fa-dashboard fa-stack-1x "></i></span>Dashboard</a></li>
-            <!-- <li><a href="profile.php"><span class="fa-stack fa-lg"><i class="fa fa-user fa-stack-1x"></i></span>Profile</a></li> -->
-            <li><a href="accounts.php"><span class="fa-stack fa-lg"><i class="fa fa-users fa-stack-1x"></i></span>Accounts</a></li>
+            <li><a href="profile.php"><span class="fa-stack fa-lg"><i class="fa fa-user fa-stack-1x"></i></span>Profile</a></li>
+            
+            <li><a href="add-transaction.php"><span class="fa-stack fa-lg"><i class="fa fa-plus fa-stack-1x"></i></span>Add Transaction</a></li>
             <li><a href="transaction.php"><span class="fa-stack fa-lg"><i class="fa fa-history fa-stack-1x"></i></span>Transactions</a></li>
+
+            <li class = "mt-4 text-gray-400 text-sm ml-3 uppercase tracking-wider">Admin</li>
+            <li><a href="accounts.php"><span class="fa-stack fa-lg"><i class="fa fa-users fa-stack-1x"></i></span>Manage Accounts</a></li>
+            <li><a href="withdraw.php"><span class="fa-stack fa-lg"><i class="fa fa-usd fa-stack-1x"></i></span>Withdraw Balance</a></li>
          </ul>
       </div>
-      </div>
+      
 
     
     <!-- Main content -->
-    <div class = "container" id = "main-content"> 
-        <div class = "flex1  md:flex md:flex-row-reverse">
+    <div class = "container mt-4" id = "main-content"> 
+        <!-- <div class = "flex1  md:flex md:flex-row-reverse">
             <div class = "flex-col md:mr-3 lg:grid">
                 <form class="">
                     <h4 class = "text-xl mb-2 sm:text-center md:text-justify "><b>Balance</b></h4>
@@ -70,30 +75,34 @@
                 </form>
                 <button type="submit" data-toggle="modal" class="mx-2 px-3 py-2 rounded-md shadow-sm border border-gray-600 bg-eclightblue text-white hover:no-underline hover:text-ecwhite hover:bg-ecgray w-full md:w-36 lg:w-28 text-sm uppercase tracking-wider mb-4 md:mb-0 lg:justify-self-end" data-target="#withdrawModal">Withdraw</button>   
             </div>
+        </div> -->
+
+        <!-- Dashboard 3 boxes -->
+        <div class="grid grid-col-1 gap-4 md:grid-cols-3 md:gap-2 lg:grid-cols-3 lg:gap-4 xl:gap-8 ">
+            <div class="border-2 border-ecdarkblue rounded-md p-10 h-full text-center shadow overflow-hidden">
+                <h1 class = "font-bold">Transactions</h1>
+                <span class ="text-center text-2xl">47</span>
+                
+            </div>
+                
+            <div class="border-2 border-ecdarkblue rounded-md p-10 h-full text-center shadow overflow-hidden">
+                <h1 class = "font-bold">Daily Sales</h1>
+                <span class ="text-center text-2xl">₱125</span>
+                
+            </div>
+
+            <div class="border-2 border-ecdarkblue rounded-md p-10 h-full text-center shadow overflow-hidden">
+                <h1 class = "font-bold">Balance</h1>
+                <span class ="text-center text-2xl">₱1,550</span>
+                
+            </div>
         </div>
         
-          <!-- The Modal -->
-          <div class="modal" id="withdrawModal">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <!-- Modal Header -->
-                <div class="modal-header">
-                  <h4 class="modal-title">Withdraw</h4>
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body" id="id-modal-body2">
-                   <div class = "withdraw-modal-body">
-                       <label id="amt-label">Enter the amount:</label>
-                    <input type = "text" id ="input-withdraw-amt" name = "withdraw-amount" value= "">
-                   </div>
-                    <button type="submit" data-toggle="modal" data-target="#proceedModal" class="btn btn-success" id="proceed-btn">Proceed
-                    </button>
-                </div>
-            </div>
-            </div>
-        </div>
+          
+       
     
-        <h3 class = "text-4xl mb-2" id="ca-trans-h3">Recent Transactions</h3>
+        <div>
+        <h3 class = "text-4xl mb-2 mt-6" >Recent Activity</h3>
 
         <div class="flex flex-col sm:mt-3 md:mt-0">
             <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -260,7 +269,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    
+    
+    </div> <!-- end of main content -->
+    </div> <!-- end of wrapper -->
     
     <script src="../resources/js/ecWeb.js"></script>
    </body>
