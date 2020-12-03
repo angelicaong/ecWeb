@@ -5,7 +5,7 @@
 
 ?>
 
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
    <!-- Required meta tags -->
@@ -79,19 +79,20 @@
                     <h5 id="ca-total-amt"><b>Balance</b></h5>
                     <input type="text" placeholder="1550.00" class = "border-2 p-2 text-center mt-2 mb-0 border-gray-300 rounded-md " name="amt" value=""readonly>
                 </form>
-                <button type="submit" data-toggle="modal" class="btn btn-success" data-target="#addModal" id="add-btn">ADD
-                    </button>
+            
+            <div class = "float-right mt-3">
+                <button type="submit" class = "item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:bg-ecgray uppercase tracking-wider bg-eclightblue hover:bg-gray-300 hover:no-underline" type="button" style="transition: all .15s ease" onclick="toggleModal('modal-id')">ADD</button>
             </div>
+        </div>
             
         </div>
     </div>
        
-          <!-- The Modal -->
-      <div class="modal" id="addModal">
+    <!-- The Modal -->
+    <!-- <div class="modal" id="addModal">
         <div class="modal-dialog">
           <div class="modal-content">
            
-            <!-- Modal Header -->
             <div class="modal-header">
               <h4 class="modal-title">ADD</h4>
               <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -99,16 +100,50 @@
             
             <div class="modal-body" id="id-modal-body2">
                <div class = "withdraw-modal-body">
-                   <label id="amt-label">Enter the amount:</label>
-                <input type = "text" id ="input-withdraw-amt" name = "withdraw-amount" value= "">
+                    <label id="amt-label">Enter the amount:</label>
+                    <input type = "text" id ="input-withdraw-amt" name = "withdraw-amount" value= "">
                </div>
                
-                <button type="submit" data-toggle="modal" data-target="#proceedModal" class="btn btn-success" id="proceed-btn">Proceed
+                <button type="submit" data-toggle="modal" data-target="#proceedModal" class="btn btn-success" id="proceed-btn">Proceed</button>
+            </div>
+          </div>
+        </div>
+    </div> -->
+
+    <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modal-id">
+        <div class="relative w-auto my-6 mx-auto max-w-3xl">
+            <!--content-->
+            <div class="border-0 rounded-md shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+            <!--header-->
+            <div class="flex items-start justify-between p-4 border-b border-solid border-gray-300 rounded-t">
+                <h3 class="text-xl font-semibold">
+                Top-up
+                </h3>
+                <button class="p-1 ml-auto bg-transparent border-0 text-black opacity-3 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" onclick="toggleModal('modal-id')">
+                <span class="text-black h-6 w-6 text-2xl block outline-none focus:outline-none">×</span>
+                </button>
+            </div>
+            <!--body-->
+            <div class="relative mx-12 md:mx-10 lg:mx-20 xl:mx-48 py-4 flex">
+                <p class="my-4 text-gray-600 text-lg leading-relaxed"> Amount: </p>
+                <input type ="text" class = "ml-4 mt-1 border-2 p-2 block w-full h-12 my-auto sm:text-sm border-gray-300 rounded-md">
+            </div>
+            <!--footer-->
+            <div class="flex items-center justify-end p-3 border-t border-solid border-gray-300 rounded-b">
+                <button class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1" type="button" style="transition: all .15s ease" onclick="toggleModal('modal-id')">Close</button>
+                <button class="h-10 px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:bg-ecgray uppercase tracking-wider bg-eclightblue hover:bg-gray-300 hover:no-underline" type="button" style="transition: all .15s ease" onclick="toggleModal('modal-id')">
+                Save Changes
                 </button>
             </div>
             </div>
         </div>
     </div>
+    <div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-id-backdrop"></div>
+
+
+
+
+
      
     <div class = "container mx-auto py-20">
         <div class = "flex">
@@ -133,10 +168,7 @@
                                 Date
                                 </th>
                                 <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
-                                Description
-                                </th>
-                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
-                                User
+                                Concessionaire
                                 </th>
                                 <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
                                 Amount
@@ -149,11 +181,11 @@
               <!--First Row-->
               <tr>
               <td class="px-6 py-4 whitespace-no-wrap">
-                                        <div class="flex items-center">
-                                            <div class="ml-4">
-                                                <div class="text-sm leading-5 font-medium text-gray-900">
-                                                12345696
-                                                </div>
+                <div class="flex items-center">
+                    <div class="ml-4">
+                        <div class="text-sm leading-5 font-medium text-gray-900">
+                        12345696
+                        </div>
                 </td>                  
                 <td class="px-6 py-4 whitespace-no-wrap">
                          <div class="text-sm leading-5 text-gray-900"> 14:10 </div> 
@@ -162,13 +194,11 @@
                          2/27/2020 
                 </td>
                 <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                        Reload
+                        1218 Diner
                 </td>
+
                 <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                        Rissha Alignay
-                </td>
-                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                        500.00
+                        50.00
                 </td>
                 </tr>
 
@@ -188,14 +218,10 @@
                          2/27/2020 
                 </td>
                 <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                        Withdrawal
-                </td>
-
-                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
                         1218 Diner
                 </td>
                 <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                        1500.00
+                        100.00
                 </td>
                 </tr>
 
@@ -215,13 +241,10 @@
                          2/27/2020 
                 </td>
                 <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                        Cash Out
+                         Cafe Archive
                 </td>
                 <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                         Christine Paez
-                </td>
-                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                        100.00
+                        110.00
                 </td>
                 </tr>
 
@@ -240,13 +263,11 @@
                          2/27/2020 
                 </td>
                 <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                        Reload
+                        Cafe Archive
                 </td>
+
                 <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                        Angelica Ong
-                </td>
-                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                        1000.00
+                        55.00
                 </td>
                 </tr>
 
@@ -265,13 +286,10 @@
                          2/27/2020 
                 </td>
                 <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                        Withdrawal
-                </td>
-                <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
                         Cafe Archive
                 </td>
                 <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                        2000.00
+                        70.00
                 </td>
                 </tr>
             </tbody>
@@ -279,5 +297,13 @@
     </div>
 
     <script src="../resources/js/ecWeb.js"></script>
+    <script type="text/javascript">
+  function toggleModal(modalID){
+    document.getElementById(modalID).classList.toggle("hidden");
+    document.getElementById(modalID + "-backdrop").classList.toggle("hidden");
+    document.getElementById(modalID).classList.toggle("flex");
+    document.getElementById(modalID + "-backdrop").classList.toggle("flex");
+  }
+</script>
    </body>
    </html>

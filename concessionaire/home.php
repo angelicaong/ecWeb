@@ -8,281 +8,259 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <!-- Required meta tags -->
+   <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src ="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
     <!-- Tailwind CSS -->
     <link href="../resources/css/public/styles.css" rel="stylesheet">
+
     <!-- additional chuchu -->
-    <link rel="shortcut icon" type="image" href="../resources/images/ec-logo-only.png" />
+    <link rel="icon" href="../resources/images/ec-logo-only.png" />
     <link rel="stylesheet" href="../resources/css/main.css">
     <title>Home</title>
     
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     </head>
+
     
    <body>
-    <nav class="bg-ecdarkblue mb-10"> 
-        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-            <div class="relative flex items-center justify-between h-16">
-                <div class="flex-1 flex sm:items-stretch sm:justify-start">
-                    <a class="flex items-center" href="home.php" >
-                        <img class="block h-10 w-auto pl-4" src= "../resources/images/ec-logo-white-new.png" alt="EC Card logo">
-                    </a>
-                </div>  
-                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:pr-0">
-                    <div class="relative px-3 py-2 font-medium rounded-md text-sm" >
-                        <a class = "text-white tracking-wide " href="../resources/php/logout.php">Log out</a>
-                    </div>
-                    
-                
-                
-                </div>
-            </div>
+   <nav class="navbar navbar-default no-margin" id="navbar">
+      <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header fixed-brand">
+            <input type="checkbox" id="menu-toggle"/>
+            <label class = "fa fa-navicon fa-stack-2x" for = "menu-toggle" id="burger-icon"></label>
         </div>
-    </nav>
-
-    <div class = "container mx-auto py-4">
-        <div class = "flex">
-            <h2 class = "flex-1 tem-left text-3xl mt-3 mb-3 font-medium tracking-wide">Menu </h2>
-            <h2 class="flex-initial item-right text-center h-10 m-auto px-3 py-2 text-3xl t-3 mb-3 font-medium tracking-wider hover:bg-gray-300">Cart</button>
-        </div>
-
-
-    <div class ="container" id="cc-main">
-       <div class ="cc-menu">
-            <button type ="submit" class="btn btn-dark" id="cc-menu-items" onclick="window.location.href='rice-bowls.php'">Rice Bowls</button>
-            <button type ="submit" class="btn btn-dark" id="cc-menu-items"onclick="window.location.href='sandwiches.php'">Sandwiches</button>
-            <button type ="submit" class="btn btn-dark" id="cc-menu-items"onclick="window.location.href='pasta.php'">Pasta</button>
-            <button type ="submit" class="btn btn-dark" id="cc-menu-items"onclick="window.location.href='salads.php'">Salads</button>
-            <button type ="submit" class="btn btn-dark" id="cc-menu-items"onclick="window.location.href='hot-drinks.php'">Hot Drinks</button>
-            <button type ="submit" class="btn btn-dark" id="cc-menu-items"onclick="window.location.href='cold-drinks.php'">Cold Drinks</button>
-            <button type ="submit" class="btn btn-dark" id="cc-menu-items"onclick="window.location.href='shakes.php'">Shakes</button>
-       </div>
-       
-       <div class ="cc-cart">
-          <table class="table" id="table-cart">
-            <thead>
-            <tr>
-                <th>Description</th>
-                <th>Price</th>
-                <th>Qty</th>
-                <th>Amount</th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>Pork Tonkatsu</td>
-                <td>55.00</td>
-                <td class="tr-qty">1</td>
-                <td>55.00</td>
-                <td><img src="../resources/images/delete.png" height="20px" width="20px" id="delete-icon"></td> 
-            </tr>
-            <tr>
-                <td>Clubhouse</td>
-                <td>45.00</td>
-                <td class="tr-qty">1</td>
-                <td>45.00</td>
-                <td><img src="../resources/images/delete.png" height="20px" width="20px" id="delete-icon"></td> 
-            </tr>
-            <tr>
-                <td>Mango Shake</td>
-                <td>45.00</td>
-                <td class="tr-qty">2</td>
-                <td>90.00</td>
-                <td><img src="../resources/images/delete.png" height="20px" width="20px" id="delete-icon"></td> 
-            </tr>
-            <tr>
-                <td class="tr-space"></td>
-                <td class="tr-space"></td>
-                <td class="tr-space"></td>
-                <td class="tr-space"></td>
-                <td class="tr-space"></td> 
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td>Total</td>
-                <td>190.00</td>
-                <td></td> 
-            </tr>
-            </tbody>
-          </table>
-          
-          <button type="button" data-toggle="modal" data-target="#checkout-modal" class="btn btn-success" id="checkout-btn"><img src="../resources/images/checkout.png" class ="w-6 h-6 my-auto float-left" id="checkout-icon">Check Out</button> 
             
-               <div class="modal fade" id="checkout-modal" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="checkout-style">Payment Method</h5>
-                        </div>
-                        <div class="modal-body">
-                            <div class="theme-card">
-                                <form class="theme-form">
-                                    <div class="form-group">
-                                    <button type="button" class="btn btn-success" id="cash-btn" data-toggle="modal" data-target="#cash-modal" data-dismiss="modal">Cash</button>
-                                    <button type="button" class="btn btn-success" id="id-btn" data-toggle="modal" data-target="#id-modal" data-dismiss="modal">ID</button>
-                                    <button type="button" class="btn btn-success" id="app-btn" data-toggle="modal" data-target="#app-modal" data-dismiss="modal">QR Code</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                                  
-                    </div>
-                 </div>
-                </div>
-        </div>
-
+        <a href="home.php">
+            <img class = "new-navbar-logo" src= "../resources/images/ec-logo-white.png" alt="Logo" height="50px" width="100px" >  
+            <a class = "logout-btn" href="../resources/php/logout.php">Logout</a>
+       </a>       
+      </div>
+   </nav>
+   
+   <div id="wrapper">
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+         <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+            <li class="active-sidebar"><a href="home.php"><span class="fa-stack fa-lg"><i class="fa fa-dashboard fa-stack-1x "></i></span>Dashboard</a></li>
+            <li><a href="profile.php"><span class="fa-stack fa-lg"><i class="fa fa-user fa-stack-1x"></i></span>Profile</a></li>
             
-          <!-- Cash Modal -->
+            <li><a href="add-transaction.php"><span class="fa-stack fa-lg"><i class="fa fa-plus fa-stack-1x"></i></span>Add Transaction</a></li>
+            <li><a href="transaction.php"><span class="fa-stack fa-lg"><i class="fa fa-history fa-stack-1x"></i></span>Transactions</a></li>
+         </ul>
+      </div>
+      
 
-          <div class="modal fade" id="changemodal" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content" id="change-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="change-style">Change</h5>
-                        </div>
-                        <div class="modal-body">
-                            <div class="theme-card">
-                                <form class="theme-form">
-                                    <div class="form-group">
-                                        <label for="change" id="inputlabel">Amount Change</label>
-                                        <input type="text" class="form-control" id="inputchange" required="" readonly>
-                                    </div>
-                                                    
-                                        <input type="button" class="btn-modal btn btn-success" id="cashsubmit-btn" value="Confirm"/>
-                                        <button type="button" class="btn-modal btn btn-success" id="cashcancel-btn" data-dismiss="modal">Cancel</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="cash-modal" tabindex="-1" role="dialog" aria-labelledby="cash" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="amount-style">Cash Payment</h5>
-                        </div>
-
-                        <div class="modal-body">
-                            <div class="theme-card">
-                                <form class="theme-form">
-                                    <div class="form-group">
-                                        <label for="amt" id="amountlabel">Enter the amount</label>
-                                        <input type="number" class="form-control" id="input-amt" min=0 value="000.00" required="">
-                                    </div>
-                                    
-                                    <button type="button" class="btn-modal btn btn-success" id="cashconfirm-btn" data-toggle="modal" data-target="#changemodal" data-dismiss="modal">Next</button>
-                                    <button type="button" class="btn-modal btn btn-success" id="cashcancel-btn" data-dismiss="modal">Cancel</button>
-                                    
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </div>
-
-           <!-- ID Modal -->
-           <div class ="modal fade" id = "transact-modal" tabindex="-1" role="dialog" aria-labelledby="transactmodal" aria-hidden="true">
-              <div class ="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div class="theme-card">
-                        <form class="theme-form">
-                          <div class="form-group">
-                              <label for="" id="idlabel">Transaction Completed!</label> 
-                          </div>
-                            <button type="button" class="btn-modal btn btn-success" id="idconfirm-btn" data-toggle="modal" data-target="#" data-dismiss="modal">Ok</button>
-                            <button type="button" class="btn-modal btn btn-success" id="idcncel-btn" data-dismiss="modal">Cancel</button>
-                        </form>
-                    </div>
-                  </div>
-                  </div>
-               </div>
-            </div>
     
-            <div class ="modal fade" id = "id-modal" tabindex="-1" role="dialog" aria-labelledby="idmodal" aria-hidden="true">
-              <div class ="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class = "modal-title" id ="id-style">ID Payment</h5>
-                  </div>
-                  <div class="modal-body">
-                    <div class="theme-card">
-                        <form class="theme-form">
-                          <div class="form-group">
-                              <label for="idnumlabel" id="idlabel">ID Number</label>
-                              <input type="number" class="form-control" id="input-id" value="00-00-0000" required="" readonly>
-                          </div>
-                            <button type="button" class="btn-modal btn btn-outline-primary" id="idconfirm-btn" data-toggle="modal" data-target="#transact-modal" data-dismiss="modal">Next</button>
-                            <button type="button" class="btn-modal btn btn-outline-primary" id="idcncel-btn" data-dismiss="modal">Cancel</button>
-                        </form>
-                    </div>
-                  </div>
-              </div>
+    <!-- Main content -->
+    <div class = "container mt-4" id = "main-content"> 
+
+        <!-- Dashboard 3 boxes -->
+        <div class="grid grid-col-1 gap-4 md:grid-cols-3 md:gap-2 lg:grid-cols-3 lg:gap-4 xl:gap-8 ">
+            <div class="border-2 border-ecdarkblue rounded-md p-10 h-full text-center shadow overflow-hidden">
+                <h1 class = "font-bold">Transactions</h1>
+                <span class ="text-center text-2xl">47</span>
+                
+            </div>
+                
+            <div class="border-2 border-ecdarkblue rounded-md p-10 h-full text-center shadow overflow-hidden">
+                <h1 class = "font-bold">Daily Sales</h1>
+                <span class ="text-center text-2xl">₱125</span>
+                
+            </div>
+
+            <div class="border-2 border-ecdarkblue rounded-md p-10 h-full text-center shadow overflow-hidden">
+                <h1 class = "font-bold">Balance</h1>
+                <span class ="text-center text-2xl">₱1,550</span>
+                
             </div>
         </div>
-
-
-            <!-- QR Modal -->
-            <div class ="modal fade" id = "verified-modal" tabindex="-1" role="dialog" aria-labelledby="verified" aria-hidden="true">
-              <div class ="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <div class="theme-card">
-                        <form class="theme-form">
-                          <div class="form-group">
-                              <label for="" id="idlabel">Transaction Verified</label> 
-                          </div>
-                            <button type="button" class="btn-modal btn btn-outline-primary" id="qrconfirm-btn" data-toggle="modal" data-target="#" data-dismiss="modal">Ok</button>
-                            <button type="button" class="btn-modal btn btn-outline-primary" id="qrcncel-btn" data-dismiss="modal">Cancel</button>
-                        </form>
-                    </div>
-                  </div>
-              </div>
-            </div>
-            </div>
-
-            <div class ="modal fade" id = "app-modal" tabindex="-1" role="dialog" aria-labelledby="appmodal" aria-hidden="true">
-              <div class ="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class = "modal-title" id ="qr-style">QR Code Payment</h5>
-                  </div>
-                  <div class="modal-body">
-                    <div class="theme-card">
-                        <form class="theme-form">
-                          <div class="form-group">
-                              <label for="refnumlabel" id="refnum">Enter Reference #:</label>
-                              <input type="text" class="form-control" id="input-ref" required="">
-                          </div>
-                            <button type="button" class="btn-modal btn btn-outline-primary" id="qrconfirm-btn" data-toggle="modal" data-target="#verified-modal" data-dismiss="modal">Confirm</button>
-                            <button type="button" class="btn-modal btn btn-outline-primary" id="qrcncel-btn" data-dismiss="modal">Cancel</button>
-                        </form>
-                    </div>
-                  </div>
-              </div>
-            </div>
-            </div>
-
-
-            
-
-           
+        
+          
        
-       </div>
+    
+        <div>
+        <h3 class = "text-4xl mb-2 mt-6" >Recent Activity</h3>
+
+        <div class="flex flex-col sm:mt-3 md:mt-0">
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                    <div class="shadow-md overflow-hidden border-b border-t border-gray-200 sm:rounded-lg">
+                        <table class="min-w-full divide-y divide-gray-300 bg-ecdarkblue">
+                            <thead>
+                                <tr>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                        Reference No.
+                                    </th>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                        Date
+                                    </th>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                        Time
+                                    </th>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                        Description
+                                    </th>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                        Credit
+                                    </th>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                        Debit
+                                    </th>
+                                    <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                        Balance
+                                    </th>
+
+                                </tr>
+                            </thead>
+
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                
+                                <!-- 1st row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1012202001
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        10/12/2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        14:10
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Alignay, Rissha Jhie-Ann
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        50.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        0.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1550.00
+                                    </td>
+                                </tr>
+
+                                <!-- 2nd row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1012202002
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        10/12/2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        13:11
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Paez, Christine Anne
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        50.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        0.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1500.00
+                                    </td>
+                                </tr>
+                                                                    
+                                    <!-- 3rd row -->
+                                    <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1012202001
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        10/12/2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        13:00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Ong, Angelica Farrah Mae
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        25.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        0.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1450.00
+                                    </td>
+                                </tr>
+
+                                <!-- 4th row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1012202001
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        10/12/2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        12:05
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Withdrawal
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        0.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1000.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1425.00
+                                    </td>
+                                </tr>
+
+                                <!-- 5th row -->
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        1012202001
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        10/12/2020
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        11:10
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        Castillo, Kit Alejandro
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        100.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        0.00
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                        2425.00
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    </div> <!-- end of main content -->
+    </div> <!-- end of wrapper -->
+    
+    <script src="../resources/js/ecWeb.js"></script>
    </body>
-</html>    
-                
+</html>

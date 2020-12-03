@@ -5,7 +5,7 @@
 
 ?>
 
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
    <!-- Required meta tags -->
@@ -26,7 +26,7 @@
     <!-- additional chuchu -->
     <link rel="shortcut icon" type="image" href="../resources/images/ec-logo-only.png" />
     <link rel="stylesheet" href="../resources/css/main.css">
-    <title>Withdraw Balance</title>
+    <title>Withdraw Requests</title>
     
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     </head>
@@ -59,14 +59,14 @@
 
             <li class = "mt-4 text-gray-400 text-sm ml-3 uppercase tracking-wider">Admin</li>
             <li><a href="accounts.php"><span class="fa-stack fa-lg"><i class="fa fa-users fa-stack-1x"></i></span>Manage Accounts</a></li>
-            <li class="active-sidebar"><a href="withdraw.php"><span class="fa-stack fa-lg"><i class="fa fa-usd fa-stack-1x"></i></span>Withdraw Balance</a></li>
+            <li class="active-sidebar"><a href="withdraw.php"><span class="fa-stack fa-lg"><i class="fa fa-usd fa-stack-1x"></i></span>Withdraw Requests</a></li>
          </ul>
       </div>
 
     <div class = "container" id="main-content">
     <div class = "flex flex-col sm:flex-row">
             <h2 class = "flex-1 text-2xl sm:mt-3 mb-3 font-medium tracking-wide">Withdrawal Requests</h2>
-            <a class="flex-initial text-center h-10 mx-2 px-3 py-2 rounded-md shadow-sm border border-gray-600 hover:no-underline hover:text-ecwhite hover:bg-ecgray text-sm uppercase tracking-wider mb-2 sm:my-auto " href="add-account.php">Add account</a>
+            <a class="flex-initial text-center h-10 mx-2 px-3 py-2 rounded-md shadow-sm border border-gray-600 hover:no-underline hover:text-ecwhite hover:bg-ecgray text-sm uppercase tracking-wider mb-2 sm:my-auto " href="add-withdraw.php">New Request</a>
         </div>
         <div class="flex flex-col sm:mt-3 md:mt-0">
             <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -85,8 +85,13 @@
                                     Time
                                 </th>
                                 <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
+                                    Amount
+                                </th>
+                                <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-white uppercase tracking-wider bg-ecdarkblue">
                                     Status
                                 </th>
+                                <th class="px-6 py-3 bg-gray-50 bg-ecdarkblue"></th>
+                                <th class="px-6 py-3 bg-gray-50 bg-ecdarkblue"></th>
                                 
                                 </tr>
                             </thead>
@@ -103,10 +108,19 @@
                                     <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
                                         13:15
                                     </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                    ₱ 1,000
+                                    </td>
                                     <td class="px-6 py-4 whitespace-no-wrap">
                                         <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-gray-100 text-gray-500">
                                         Pending
                                         </span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
+                                        <a class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:bg-ecgray uppercase tracking-wider bg-eclightblue hover:bg-gray-300 hover:no-underline" href="edit-withdraw.php">Edit</button>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium eclightblue">
+                                        <a href = "#" class="flex-initial item-right text-center h-10 m-auto px-3 py-2 rounded-md shadow-md border border-gray-400 text-sm text-white hover:bg-ecgray uppercase tracking-wider bg-eclightblue hover:bg-gray-300 hover:no-underline">Cancel</button>
                                     </td>
                                 </tr>
 
@@ -121,11 +135,16 @@
                                     <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
                                         15:50
                                     </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                    ₱ 1,200
+                                    </td>
                                     <td class="px-6 py-4 whitespace-no-wrap">
                                         <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
                                         Approved
                                         </span>
                                     </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900"></td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900"></td>
                                 </tr>
 
                                 <!-- 3rd row -->
@@ -139,11 +158,16 @@
                                     <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
                                         10:04
                                     </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
+                                    ₱ 1,700
+                                    </td>
                                     <td class="px-6 py-4 whitespace-no-wrap">
                                         <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
                                         Approved
                                         </span>
                                     </td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900"></td>
+                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900"></td>
                                 </tr>
 
                             </tbody>

@@ -5,7 +5,7 @@
 
 ?>
 
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
    <!-- Required meta tags -->
@@ -115,11 +115,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    
 
-    <div class = "flex flex-col ml-2 mr-2 sm:flex-row md:flex-row lg:flex-row xl:flex-row justify-center sm:justify-end md:pr-5 lg:pr-10 xl:pr-14">
+        <div class = "flex flex-col ml-2 mr-2 sm:flex-row md:flex-row lg:flex-row xl:flex-row justify-center sm:justify-end md:pr-5 lg:pr-10 xl:pr-14">
             <button class="flex-initial text-center mb-1 mx-2 px-3 py-2 rounded-md shadow-sm border border-gray-600 hover:no-underline text-ecwhite bg-ecgray text-sm uppercase tracking-wider" onclick="window.location.href='accounts.php'">Back</button>
             <button class="flex-initial text-center mb-1 mx-2 px-3 py-2 rounded-md shadow-sm border border-gray-600 bg-eclightblue text-white hover:no-underline hover:text-ecwhite hover:bg-ecgray text-sm uppercase tracking-wider" onclick="window.location.href='accounts.php'"><img src="../resources/images/save.png" class ="w-4 h-4 my-auto mr-2 inline">Save</button>
+        </div>
         </div>
     <script src="../resources/js/ecWeb.js"></script>
    </body>

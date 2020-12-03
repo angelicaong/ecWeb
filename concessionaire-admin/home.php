@@ -5,9 +5,9 @@
 
 ?>
 
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
     <link href="../resources/css/public/styles.css" rel="stylesheet">
 
     <!-- additional chuchu -->
-    <link rel="shortcut icon" type="image" href="../resources/images/ec-logo-only.png" />
+    <link rel="icon" href="../resources/images/ec-logo-only.png" />
     <link rel="stylesheet" href="../resources/css/main.css">
     <title>Home</title>
     
@@ -67,15 +67,6 @@
     
     <!-- Main content -->
     <div class = "container mt-4" id = "main-content"> 
-        <!-- <div class = "flex1  md:flex md:flex-row-reverse">
-            <div class = "flex-col md:mr-3 lg:grid">
-                <form class="">
-                    <h4 class = "text-xl mb-2 sm:text-center md:text-justify "><b>Balance</b></h4>
-                    <input type="text" class = "w-full md:w-36 lg:w-56 h-10 lg:h-12 p-3 text-center border rounded-lg mx-2 mb-2 px-3 py-2" placeholder="1550.00" value=""readonly>
-                </form>
-                <button type="submit" data-toggle="modal" class="mx-2 px-3 py-2 rounded-md shadow-sm border border-gray-600 bg-eclightblue text-white hover:no-underline hover:text-ecwhite hover:bg-ecgray w-full md:w-36 lg:w-28 text-sm uppercase tracking-wider mb-4 md:mb-0 lg:justify-self-end" data-target="#withdrawModal">Withdraw</button>   
-            </div>
-        </div> -->
 
         <!-- Dashboard 3 boxes -->
         <div class="grid grid-col-1 gap-4 md:grid-cols-3 md:gap-2 lg:grid-cols-3 lg:gap-4 xl:gap-8 ">
