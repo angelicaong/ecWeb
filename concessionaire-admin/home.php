@@ -1,90 +1,99 @@
 <?php
 
-	session_start();
-	require_once('../resources/php/session-ca.php');
+    session_start();
+    require_once('../resources/php/session-ca.php');
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <!-- Required meta tags -->
+   <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src ="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
     <!-- Tailwind CSS -->
     <link href="../resources/css/public/styles.css" rel="stylesheet">
+
     <!-- additional chuchu -->
-    <link rel="shortcut icon" type="image" href="../resources/images/ec-logo-only.png" />
+    <link rel="icon" href="../resources/images/ec-logo-only.png" />
     <link rel="stylesheet" href="../resources/css/main.css">
     <title>Home</title>
     
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     </head>
+
     
    <body>
-
-   <header class="new-navbar">
+   <nav class="navbar navbar-default no-margin" id="navbar">
+      <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header fixed-brand">
+            <input type="checkbox" id="menu-toggle"/>
+            <label class = "fa fa-navicon fa-stack-2x" for = "menu-toggle" id="burger-icon"></label>
+        </div>
+            
         <a href="home.php">
-            <img class = "new-navbar-logo" src= "../resources/images/ec-logo-white.png" alt="" height="50px" width="100px" >
-        </a>
-        <nav>
-            <ul class="new-nav-area">
-                <li><a class="active-navbar" href="home.php">Home</a></li>
-                <li><a href="accounts.php">Accounts</a></li>
-                <li><a href="transaction.php">Transactions</a></li>
-                <li><a href="menu.php">Menu</a></li>
-                <li><a href="../resources/php/logout.php">Logout</a></li>
-            </ul>
-        </nav>
-        <div class = "burger">
-            <div class = "line1"></div>
-            <div class = "line2"></div>
-            <div class = "line3"></div>
-        </div>
-        
-    </header>
+            <img class = "new-navbar-logo" src= "../resources/images/ec-logo-white.png" alt="Logo" height="50px" width="100px" >  
+            <a class = "logout-btn" href="../resources/php/logout.php">Logout</a>
+       </a>       
+      </div>
+   </nav>
+   
+   <div id="wrapper">
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+         <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+            <li class="active-sidebar"><a href="home.php"><span class="fa-stack fa-lg"><i class="fa fa-dashboard fa-stack-1x "></i></span>Dashboard</a></li>
+            <li><a href="profile.php"><span class="fa-stack fa-lg"><i class="fa fa-user fa-stack-1x"></i></span>Profile</a></li>
+            
+            <li><a href="add-transaction.php"><span class="fa-stack fa-lg"><i class="fa fa-plus fa-stack-1x"></i></span>Add Transaction</a></li>
+            <li><a href="transaction.php"><span class="fa-stack fa-lg"><i class="fa fa-history fa-stack-1x"></i></span>Transactions</a></li>
+
+            <li class = "mt-4 text-gray-400 text-sm ml-3 uppercase tracking-wider">Admin</li>
+            <li><a href="accounts.php"><span class="fa-stack fa-lg"><i class="fa fa-users fa-stack-1x"></i></span>Manage Accounts</a></li>
+            <li><a href="withdraw.php"><span class="fa-stack fa-lg"><i class="fa fa-usd fa-stack-1x"></i></span>Withdraw Balance</a></li>
+         </ul>
+      </div>
+      
 
     
-    
-    <div class = "container">
-        
-        <div class = "flex1  md:flex md:flex-row-reverse">
-            <div class = "flex-col md:mr-3 lg:grid">
-                <form class="">
-                    <h4 class = "text-xl mb-2 sm:text-center md:text-justify "><b>Balance</b></h4>
-                    <input type="text" class = "w-full md:w-36 lg:w-56 h-10 lg:h-12 p-3 text-center border rounded-lg mx-2 mb-2 px-3 py-2" placeholder="1550.00" value=""readonly>
-                </form>
-                <button type="submit" data-toggle="modal" class="mx-2 px-3 py-2 rounded-md shadow-sm border border-gray-600 bg-eclightblue text-white hover:no-underline hover:text-ecwhite hover:bg-ecgray w-full md:w-36 lg:w-28 text-sm uppercase tracking-wider mb-4 md:mb-0 lg:justify-self-end" data-target="#withdrawModal">Withdraw</button>   
+    <!-- Main content -->
+    <div class = "container mt-4" id = "main-content"> 
+
+        <!-- Dashboard 3 boxes -->
+        <div class="grid grid-col-1 gap-4 md:grid-cols-3 md:gap-2 lg:grid-cols-3 lg:gap-4 xl:gap-8 ">
+            <div class="border-2 border-ecdarkblue rounded-md p-10 h-full text-center shadow overflow-hidden">
+                <h1 class = "font-bold">Transactions</h1>
+                <span class ="text-center text-2xl">47</span>
+                
+            </div>
+                
+            <div class="border-2 border-ecdarkblue rounded-md p-10 h-full text-center shadow overflow-hidden">
+                <h1 class = "font-bold">Daily Sales</h1>
+                <span class ="text-center text-2xl">₱125</span>
+                
+            </div>
+
+            <div class="border-2 border-ecdarkblue rounded-md p-10 h-full text-center shadow overflow-hidden">
+                <h1 class = "font-bold">Balance</h1>
+                <span class ="text-center text-2xl">₱1,550</span>
+                
             </div>
         </div>
         
-          <!-- The Modal -->
-          <div class="modal" id="withdrawModal">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <!-- Modal Header -->
-                <div class="modal-header">
-                  <h4 class="modal-title">Withdraw</h4>
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body" id="id-modal-body2">
-                   <div class = "withdraw-modal-body">
-                       <label id="amt-label">Enter the amount:</label>
-                    <input type = "text" id ="input-withdraw-amt" name = "withdraw-amount" value= "">
-                   </div>
-                    <button type="submit" data-toggle="modal" data-target="#proceedModal" class="btn btn-success" id="proceed-btn">Proceed
-                    </button>
-                </div>
-            </div>
-            </div>
-        </div>
+          
+       
     
-        <h3 class = "text-4xl mb-2" id="ca-trans-h3">Transaction History</h3>
+        <div>
+        <h3 class = "text-4xl mb-2 mt-6" >Recent Activity</h3>
 
         <div class="flex flex-col sm:mt-3 md:mt-0">
             <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -251,7 +260,11 @@
                 </div>
             </div>
         </div>
-    </div>
-
+    
+    
+    </div> <!-- end of main content -->
+    </div> <!-- end of wrapper -->
+    
     <script src="../resources/js/ecWeb.js"></script>
    </body>
+</html>
