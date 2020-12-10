@@ -31784,6 +31784,10 @@ video {
   font-size: 200px;
 }
 
+.w-30r {
+  width: 30rem;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -187523,4 +187527,3 @@ video {
             animation: bounce 1s infinite;
   }
 }
-  

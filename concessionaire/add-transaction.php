@@ -89,7 +89,7 @@
       
       <div>
          <div class="scan-id trans-box">
-            <div class="grid grid-cols-1 lg:grid-cols-3">
+            <div class="block w-30r mx-auto">
                <div></div>
                <div class="mt-5 mx-auto md:mt-0 ">
                   <form action="#" method="POST">
@@ -121,7 +121,7 @@
          </div>
 
          <div class="qr-code trans-box">
-            <div class="grid grid-cols-1 lg:grid-cols-3">
+            <div class="block w-30r mx-auto">
                <div></div>
                <div class="mt-5 mx-auto md:mt-0 ">
                   <form action="#" method="POST">
